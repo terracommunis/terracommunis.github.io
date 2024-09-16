@@ -1,6 +1,8 @@
 # Viewshed algorithm
 ## Author: Roly
 ## Date: Nov 14, 2020
+### [Development of viewshed algorithm used in collaboration with Archaeologist Eduardo Mazuera to explore inter-visibility in Cuidad Perdida, Colombia](https://www.sciencedirect.com/science/article/pii/S0305440321000431)
+
 The viewshed analysis is undertaken using Wang, Robinson, and White's (2000) reference plane method, which is computationally faster than methods based on sightlines. An auxiliary elevation model is defined to determine the viewshed score for any point in the DEM. The auxiliary elevation initially matches the underlying DEM and later its auxiliary height values are updated as the algorithm progresses. The point under evaluation is referred to as the view point, the surrounding DEM is divided into eight sectors, each bounded by cardinal compass points (Figure 1).  
    
 ![DEM is subdivided into eight sectors around the view point](fig1.jpg)
@@ -31,6 +33,7 @@ Using plane method, an entire DEM can be processed and a view score assigned to 
    
 Figure 5. All visible sample points in sector 0.  
    
-## Reference
-   
+## References
+
+Mazuera, E., & Hudson, R. 2021. Inter-visibility between settlements in pre-Hispanic Sierra Nevada de Santa Marta, Colombia. The relation between hierarchy and control of distant communications. Journal of Archaeological Science, 129, 105373.
 Wang, J., White, K., Robinson, G., 2000. Generating viewsheds without using sightlines. Photogramm. Eng. Remote Sensing 66, 87–90.
