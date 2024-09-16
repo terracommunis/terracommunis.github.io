@@ -9,7 +9,7 @@ Figure 1. DEM is subdivided into eight sectors around the view point.
    
 The eight boundaries between sectors are processed first. These can be analyzed using two-dimensional geometry as the points on each boundary lie in a single vertical plane. The process proceeds outwards from the view point, each time a sample point (n) from the DEM and previous point (n-1) from the auxiliary DEM are selected (Figure 2). Two vectors are defined from the viewpoint to the sample point and previous point (sample vector and previous vector) (Figure 2). Two vertical angles are compared to determine if the sample point is visible from the view point. The first angle (zvs) is between the vertical vector above the view point and the sample vector. The second angle (zvp) is between a vertical vector above the view point and the previous vector. If angle zvp is greater than zvs, the point is visible and the visibility score of the view point is incremented, the process continues to the next sample point. If zvp is smaller than zvs, the sample point is not visible (as shown in Figure 2), it is projected onto the previous vector. The elevation of the corresponding point in the auxiliary grid is updated to match and used to determine the visibility of the following sample points.  
    
-![Processing a sector boundary](fig3.jpg)
+![Processing a sector boundary](fig2.jpg)
    
 Figure 2. Processing a sector boundary.  
    
