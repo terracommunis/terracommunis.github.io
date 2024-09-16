@@ -2,4 +2,4 @@
 
 Content goes here.  
 
-pages for terra communia aka common ground
+[Article on view shed algorithms](ReferencePlaneAlgorithm/refPlaneAlgorithm.md)
