@@ -29,6 +29,8 @@ The data extraction process involved web scraping techniques to retrieve BREEAM 
 
 **Technologies Used**: The web scraping pipeline was implemented using Python’s requests library for static data extraction and Selenium for simulating browser interactions to handle dynamic web elements.
 
+**Certification Overview**: According to the GreenBookLive FAQ, only products and services that have undergone third-party certification—the highest level of assurance that sustainability standards are consistently met—are listed. This type of certification differs from simple testing, as it involves ongoing audits and testing to ensure continued compliance. GreenBookLive typically requires certification bodies to be accredited by recognized organizations like the UK Accreditation Service (UKAS), ensuring the competence and impartiality of the listed certifications.
+
 **Data Fields**: Key data fields extracted included building name, location (city, region), certification date, assessor information, and certification level (e.g., “Excellent,” “Very Good”).
 
 **Challenges in Scraping**: Due to the site’s dynamic content loading, extensive use of HTML parsing and interaction simulation was necessary. Rate-limiting mechanisms were implemented to prevent overloading the web server and avoid IP blocking. Ethical considerations were also taken into account by respecting GreenBookLive's terms of service.
