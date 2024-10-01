@@ -1,4 +1,4 @@
-$\color{#58A6FF}\textsf{\large\&#x24D8;\kern{0.2cm}\normalsize Note}
+# $\color{red}{\textsf{[DRAFT]}}$
 
 # Scraping BREEAM Assessment Data: A Dive into Sustainable Building Certifications
 
