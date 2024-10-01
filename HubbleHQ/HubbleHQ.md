@@ -1,6 +1,6 @@
 # $\color{red}{\textsf{[DRAFT]}}$
 
-# [DRAFT] Scraping HubbleHQ: A Data-Driven Exploration of London’s Office Rental Market
+# Scraping HubbleHQ: A Data-Driven Exploration of London’s Office Rental Market
 
 ## Introduction
 In today’s rapidly evolving real estate landscape, access to accurate and up-to-date information is crucial for businesses seeking office space. HubbleHQ, a leading office rental platform in London, provides a wealth of data on available office spaces, rental prices, and location specifics. This project focused on scraping and analyzing data from HubbleHQ to gain deeper insights into London’s office rental market and uncover key trends across different areas of the city.
