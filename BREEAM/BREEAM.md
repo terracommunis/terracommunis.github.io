@@ -1,4 +1,4 @@
-$\color{#58A6FF}\textsf{\large\&#x24D8;\kern{0.2cm}\normalsize Note}$ Somethings are different here on `gist` and on the actual markdown of README's on github or the markdown of issues, etc.
+$\color{#58A6FF}\textsf{\large\&#x24D8;\kern{0.2cm}\normalsize Note}
 
 # Scraping BREEAM Assessment Data: A Dive into Sustainable Building Certifications
 
