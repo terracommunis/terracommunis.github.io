@@ -1,6 +1,6 @@
 # $\color{red}{\textsf{[DRAFT]}}$
 
-# Scraping BREEAM Assessment Data: A Dive into Sustainable Building Certifications
+# Scraping Certified BREEAM Assessments Data
 
 ## Introduction
 Sustainable design and construction are becoming increasingly central to how we build for the future. One key metric for assessing sustainability in buildings is the BREEAM certification, which rates structures based on energy efficiency, water use, pollution reduction, and other factors. In this project, I set out to scrape and analyze data on certified BREEAM assessments to track trends and gain insights into the distribution of these certifications across building types and regions.
