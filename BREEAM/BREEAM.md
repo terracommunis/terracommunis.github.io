@@ -1,4 +1,6 @@
-# <span style="color: red; font-weight: bold;">[DRAFT]:</span> Scraping BREEAM Assessment Data: A Dive into Sustainable Building Certifications
+$\color{#58A6FF}\textsf{\large\&#x24D8;\kern{0.2cm}\normalsize Note}$ Somethings are different here on `gist` and on the actual markdown of README's on github or the markdown of issues, etc.
+
+# Scraping BREEAM Assessment Data: A Dive into Sustainable Building Certifications
 
 ## Introduction
 Sustainable design and construction are becoming increasingly central to how we build for the future. One key metric for assessing sustainability in buildings is the BREEAM certification, which rates structures based on energy efficiency, water use, pollution reduction, and other factors. In this project, I set out to scrape and analyze data on certified BREEAM assessments to track trends and gain insights into the distribution of these certifications across building types and regions.
