@@ -17,7 +17,8 @@ The primary objective of this study is to systematically extract and analyze dat
 
 This study covers approximately 40,000 certified assessments, spanning various building types, sectors, and regions across the UK, with the goal of uncovering spatial and temporal trends in sustainable construction.
 
-![DEM is subdivided into eight sectors around the view point](Outstanding Certified assessments.png)
+![DEM is subdivided into eight sectors around the view point](BREEAM/Outstanding Certified assessments.png)
+
    
 Figure 1. DEM is subdivided into eight sectors around the view point.  
 
