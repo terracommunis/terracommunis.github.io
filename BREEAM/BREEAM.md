@@ -17,6 +17,10 @@ The primary objective of this study is to systematically extract and analyze dat
 
 This study covers approximately 40,000 certified assessments, spanning various building types, sectors, and regions across the UK, with the goal of uncovering spatial and temporal trends in sustainable construction.
 
+![DEM is subdivided into eight sectors around the view point](links/Outstanding Certified assessments .png)
+   
+Figure 1. DEM is subdivided into eight sectors around the view point.  
+
 ## Relevance of the Study
 As sustainability metrics become a standard part of architectural practice, it is essential to analyze the proliferation of BREEAM certifications to better understand the progress of green building initiatives. This study provides a quantitative approach to tracking certification trends over time, visualizing regional disparities, and assessing which sectors are most aligned with sustainable practices.
 
