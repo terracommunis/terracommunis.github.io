@@ -19,7 +19,7 @@ This study covers approximately 40,000 certified assessments, spanning various b
 
 ![DEM is subdivided into eight sectors around the view point](links/Outstanding Certified assessments.png)
 
-![DEM is subdivided into eight sectors around the view point](fig1.jpg)
+![DEM is subdivided into eight sectors around the view point](links/fig1.jpg)
    
 Figure 1. DEM is subdivided into eight sectors around the view point.  
 
