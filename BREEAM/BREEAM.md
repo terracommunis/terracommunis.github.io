@@ -18,7 +18,7 @@ The primary objective of this study is to systematically extract and analyze dat
 This study covers approximately 40,000 certified assessments, spanning various building types, sectors, and regions across the UK, with the goal of uncovering spatial and temporal trends in sustainable construction.
 
 ![BREEAM Outstanding Certified Assessments](links/Map_world.png)
-Figure 1. BREEAM Outstanding Certified Assessments.  
+Figure 1. xxx.  
 
 ## Relevance of the Study
 As sustainability metrics become a standard part of architectural practice, it is essential to analyze the proliferation of BREEAM certifications to better understand the progress of green building initiatives. This study provides a quantitative approach to tracking certification trends over time, visualizing regional disparities, and assessing which sectors are most aligned with sustainable practices.
@@ -26,7 +26,7 @@ As sustainability metrics become a standard part of architectural practice, it i
 Given the UK’s ambitious net-zero goals, analyzing BREEAM certifications offers valuable insights for architects, urban planners, and policymakers. This research also aligns with government initiatives like the UK Green Building Council’s roadmap for sustainability, making the findings particularly relevant to ongoing legislative efforts.
 
 ![BREEAM Outstanding Certified Assessments](links/Map_UK.png)
-Figure 2. BREEAM Outstanding Certified Assessments.  
+Figure 2. xxx  
 
 ## Methodology
 
