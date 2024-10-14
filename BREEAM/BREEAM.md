@@ -26,6 +26,8 @@ As sustainability metrics become a standard part of architectural practice, it i
 
 Given the UK’s ambitious net-zero goals, analyzing BREEAM certifications offers valuable insights for architects, urban planners, and policymakers. This research also aligns with government initiatives like the UK Green Building Council’s roadmap for sustainability, making the findings particularly relevant to ongoing legislative efforts.
 
+![BREEAM Outstanding Certified Assessments](links/Map_UK.png)
+
 ## Methodology
 
 ### Web-Scraping Process
