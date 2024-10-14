@@ -31,16 +31,16 @@ Figure 2. xxx
 ![BREEAM Outstanding Certified Assessments](links/Map_London.png)
 Figure 3. xxx 
 
-![BREEAM Outstanding Certified Assessments](links/Land Use Percentage.png)
+![BREEAM Outstanding Certified Assessments](links/Land_Use_Percentage.png)
 Figure 4. xxx  
 
-![BREEAM Outstanding Certified Assessments](links/Office Percentage of Outstanding Dougnut.png)
+![BREEAM Outstanding Certified Assessments](links/Office_Percentage.png)
 Figure 5. xxx 
 
-![BREEAM Outstanding Certified Assessments](links/Office Outstanding.png)
+![BREEAM Outstanding Certified Assessments](links/Office_Outstanding.png)
 Figure 6. xxx 
 
-![BREEAM Outstanding Certified Assessments](links/Industrial Outstanding.png)
+![BREEAM Outstanding Certified Assessments](links/Industrial_Outstanding.png)
 Figure 7. xxx 
 
 ## Methodology
