@@ -19,6 +19,24 @@ The study employs a comprehensive methodology encompassing data extraction, clea
 #### Web-Scraping Process
 The data extraction process involved sophisticated web scraping techniques with **Python** to retrieve BREEAM certification data from the GreenBookLive database. Given the website's dynamic nature, a combination of HTTP requests and browser automation via Selenium was employed to effectively interact with and extract data from dynamically loaded content.
 
+#### Data Description
+
+The dataset comprises information on BREEAM-certified buildings extracted from the GreenBookLive database. Below is the detailed schema of the dataset:
+
+| **Field Name**         | **Data Type** | **Description**                                                  |
+|------------------------|---------------|------------------------------------------------------------------|
+| **Building Name**      | String        | Name of the certified building                                  |
+| **Location**           | String        | City and region where the building is located                   |
+| **Certification Date** | Date          | Date when the BREEAM certification was awarded                  |
+| **Certification Level**| String        | Level of certification (Pass, Good, Very Good, Excellent, Outstanding) |
+| **Assessor**           | String        | Name of the assessing body                                      |
+| **Latitude**           | Float         | Geographical latitude of the building                           |
+| **Longitude**          | Float         | Geographical longitude of the building                          |
+| **Building Type**      | String        | Category of the building (Residential, Commercial, Public Infrastructure, Other) |
+| **Cluster**            | Integer       | Cluster identifier from K-Means clustering                      |
+
+*Table 1: Data Schema of BREEAM-Certified Buildings Dataset.*
+
 #### Python Libraries:
     - `requests` for handling HTTP requests and fetching static content.
     - `lxml` for parsing HTML and extracting data fields.
