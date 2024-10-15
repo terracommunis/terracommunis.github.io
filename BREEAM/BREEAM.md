@@ -7,8 +7,9 @@ Sustainability has become a paramount concern in contemporary architecture and c
 
 Key findings indicate a significant increase in high-level certifications ("Excellent" and "Outstanding") over the past five years, with London and the South East leading in certification counts. Emerging clusters in Scotland and the North West suggest regional shifts influenced by local government initiatives and urban regeneration efforts. The commercial and residential sectors dominate certifications, while the public sector, particularly infrastructure projects, shows notable growth in specific regions. These insights underscore the importance of targeted policies and incentives to promote sustainable practices in underrepresented areas, contributing to the broader goal of environmental sustainability in the built environment.
 
-[BREEAM Outstanding Certified Assessments](links/Map_world.png)
-Figure 1: Distribution of BREEAM Outstanding Certified Buildings by Region (2023)  
+![BREEAM Outstanding Certified Assessments](links/Map_world.png)
+*Figure 1: Global map showing BREEAM-certified project locations, colour-coded by use class (e.g., Residential, Commercial).*
+
 
 [BREEAM Outstanding Certified Assessments](links/Map_UK.png)
 Figure 2. xxx 
@@ -86,6 +87,9 @@ Exploratory Data Analysis was conducted to uncover patterns, trends, and insight
 - **Tools Utilized:** Folium and GeoPandas were employed to create interactive maps displaying the density of BREEAM-certified buildings across the UK.
 
 - **Findings:** High-density areas were identified in London and the South East, with emerging clusters in Scotland and the North West, particularly in regions experiencing urban renewal.
+
+![BREEAM Outstanding Certified Assessments](links/Map_UK.png)
+*Figure 2: Detailed map of Europe and the UK showing BREEAM-certified project locations, colour-coded by use class.*
 
 ### 4. Cluster Analysis with Machine Learning
 
