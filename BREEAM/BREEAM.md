@@ -3,18 +3,12 @@
 # Scraping Certified BREEAM Assessments Data
 
 ## Executive Summary
-Sustainability has become a paramount concern in contemporary architecture and construction, driving the adoption of various frameworks to evaluate and enhance the environmental performance of buildings. Among these, the Building Research Establishment Environmental Assessment Method (BREEAM) stands out as a leading international certification system, particularly influential in the UK and Europe. This study leverages advanced data science techniques to scrape, process, and analyze approximately 40,000 BREEAM-certified assessments from the GreenBookLive database. The objective is to uncover temporal and spatial trends, sectoral distributions, and regional concentrations of certified buildings. By doing so, the research provides actionable insights for architects, developers, and policymakers, supporting informed decision-making aligned with the UK’s ambitious net-zero targets.
+Sustainability has become a paramount concern in contemporary architecture and construction, driving the adoption of various frameworks to evaluate and enhance the environmental performance of buildings. Among these, the Building Research Establishment Environmental Assessment Method (BREEAM) stands out as a leading international certification system, particularly influential in the UK and Europe. This study leverages advanced data science techniques to scrape, process, and analyze approximately 40,000 BREEAM-certified assessments from the GreenBookLive database. The objective is to uncover temporal and spatial trends, sectoral distributions, and regional concentrations of certified buildings. By doing so, the research provides actionable insights for architects, developers, and policymakers, supporting informed decision-making aligned with the UK’s ambitious net-zero targets. **FIGURE ONE IS SHOWING THAT --> REFERENCE FIGURE ALWAYS**
 
 Key findings indicate a significant increase in high-level certifications ("Excellent" and "Outstanding") over the past five years, with London and the South East leading in certification counts. Emerging clusters in Scotland and the North West suggest regional shifts influenced by local government initiatives and urban regeneration efforts. The commercial and residential sectors dominate certifications, while the public sector, particularly infrastructure projects, shows notable growth in specific regions. These insights underscore the importance of targeted policies and incentives to promote sustainable practices in underrepresented areas, contributing to the broader goal of environmental sustainability in the built environment.
 
 ![BREEAM Outstanding Certified Assessments](links/Map_world.png)
 *Figure 1: Global map showing BREEAM-certified project locations, colour-coded by use class (e.g., Residential, Commercial).*
-
-[BREEAM Outstanding Certified Assessments](links/Map_London.png)
-Figure 3. xxx 
-
-
-
 
 
 ## Methodology
@@ -73,6 +67,9 @@ Exploratory Data Analysis was conducted to uncover patterns, trends, and insight
 - **Segmentation:** Data was segmented by building type and region to identify sector-specific and region-specific trends.
 
 - **Visualization:** Bar charts and histograms were created using Matplotlib and Seaborn to represent the distribution of certifications across different sectors and regions. For instance, commercial buildings showed high certification rates in London, while residential certifications surged in the North West.
+
+![BREEAM Outstanding Certified Assessments](links/Map_London.png)
+*Figure 3: Detailed map of London showing BREEAM-certified project locations, color-coded by use class.*
 
 #### Geospatial Visualization:
 
@@ -150,7 +147,7 @@ The cleaned and processed data underwent rigorous analysis to extract meaningful
 
 
 ![BREEAM Outstanding Certified Assessments](links/Land_Use_Percentage.png)
-*Figure 4. xxx  *
+*Figure 4. xxx*
 
 
 
