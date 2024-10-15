@@ -67,7 +67,7 @@ Exploratory Data Analysis was conducted to uncover patterns, trends, and insight
 
 - **Visualization:** Line charts illustrated the upward trend in certifications, particularly highlighting increases in higher certification levels during periods of significant regulatory changes.
 
-![BREEAM Outstanding Certified Assessments](links/Office_Percentages.png)
+![BREEAM Outstanding Certified Assessments](links/Office_Percentage.png)
 *Figure 5: Pie chart depicting the number of office BREEAM certifications over each year from 2013 to 2022 colour-code by rating.*
 
 
