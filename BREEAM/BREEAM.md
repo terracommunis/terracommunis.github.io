@@ -19,11 +19,6 @@ Figure 4. xxx
 [BREEAM Outstanding Certified Assessments](links/Office_Percentage.png)
 Figure 5. xxx 
 
-[BREEAM Outstanding Certified Assessments](links/Office_Outstanding.png)
-Figure 6. xxx 
-
-[BREEAM Outstanding Certified Assessments](links/Industrial_Outstanding.png)
-Figure 7. xxx 
 
 ## Methodology
 The study employs a comprehensive methodology encompassing data extraction, cleaning, analysis, and visualization to achieve its objectives. The following sections outline the detailed processes involved:
@@ -71,6 +66,10 @@ Exploratory Data Analysis was conducted to uncover patterns, trends, and insight
 - **Analysis:** Time-series analysis tracked annual changes in certification counts over the past five years.
 
 - **Visualization:** Line charts illustrated the upward trend in certifications, particularly highlighting increases in higher certification levels during periods of significant regulatory changes.
+
+![BREEAM Outstanding Certified Assessments](links/Office_Percentage.png)
+*Figure 5: Pie chart depicting the number of office BREEAM certifications over each year from 2013 to 2022 colour-code by rating.*
+
 
 #### Sectoral and Geographic Analysis:
 
@@ -159,7 +158,7 @@ The cleaned and processed data underwent rigorous analysis to extract meaningful
 **Implication:** Increased public sector certifications indicate governmental support and incentives for sustainable development in key infrastructure areas.
 
 ![BREEAM Outstanding Certified Assessments](links/Office_Outstanding.png)
-*Figure 6: Bar chart showing the number of "Outstanding" certifications in the Office sectors.*
+*Figure 6: Bar chart showing the number of "Outstanding" certifications in the Office sector.*
 
 ![BREEAM Outstanding Certified Assessments](links/Industrial_Outstanding.png)
 *Figure 7: Bar chart showing the number of "Outstanding" certifications in the Industrial sector.* 
