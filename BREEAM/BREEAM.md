@@ -13,11 +13,8 @@ Key findings indicate a significant increase in high-level certifications ("Exce
 [BREEAM Outstanding Certified Assessments](links/Map_London.png)
 Figure 3. xxx 
 
-[BREEAM Outstanding Certified Assessments](links/Land_Use_Percentage.png)
-Figure 4. xxx  
 
-[BREEAM Outstanding Certified Assessments](links/Office_Percentage.png)
-Figure 5. xxx 
+
 
 
 ## Methodology
@@ -144,6 +141,20 @@ The cleaned and processed data underwent rigorous analysis to extract meaningful
 **Observation:** The number of buildings receiving BREEAM certifications has steadily increased over the past five years, with a significant rise in higher-level certifications ("Excellent" and "Outstanding").
 
 **Implication:** This trend aligns with increased regulatory pressures and heightened industry commitment to sustainability standards.
+
+#### **Land Use and Sectoral Distribution**
+
+- **Analysis:** The dataset was categorized by building type (residential, commercial, public infrastructure, industrial) to assess land use distribution trends.
+
+- **Findings:** While commercial and residential buildings remain dominant, there is a noticeable increase in certifications within the public and industrial sectors.
+
+
+![BREEAM Outstanding Certified Assessments](links/Land_Use_Percentage.png)
+*Figure 4. xxx  *
+
+
+
+The chart highlights a diversification in land use among certified buildings, with significant growth in public infrastructure and industrial sectors. This shift indicates a broader adoption of sustainability practices across various types of developments, beyond the traditional commercial and residential domains.
 
 #### Regional Disparities:
 
