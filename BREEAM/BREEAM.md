@@ -36,14 +36,14 @@ The study employs a comprehensive methodology encompassing data extraction, clea
 #### Web-Scraping Process
 The data extraction process involved sophisticated web scraping techniques with **Python** to retrieve BREEAM certification data from the GreenBookLive database. Given the website's dynamic nature, a combination of HTTP requests and browser automation via Selenium was employed to effectively interact with and extract data from dynamically loaded content.
 
-### Python Libraries:
+#### Python Libraries:
     - `requests` for handling HTTP requests and fetching static content.
     - `lxml` for parsing HTML and extracting data fields.
     - `Selenium` with the Chrome WebDriver for automating browser interactions and handling JavaScript-rendered content.
     - `Pandas` for data cleaning, manipulation, and analysis.
     - `Folium` and `GeoPandas` for geospatial analysis and visualization.
 
-### Web Scraping Implementation:
+#### Web Scraping Implementation:
 Implementation Steps:
 
 1. Selenium Configuration: Selenium WebDriver was configured with headless Chrome options to automate browser interactions without a graphical interface.
@@ -53,10 +53,14 @@ Implementation Steps:
 
 ### 2. Data Collection
 Once the raw data was collected, extensive preprocessing was necessary to ensure accuracy and consistency, enabling reliable analysis.
-Data Cleaning:
+#### Data Cleaning:
 - **Duplicate Removal**: Redundant entries were eliminated using Pandas' drop_duplicates() function.
 - **Standardizing Location Formats**: Inconsistent region names were standardized using mapping dictionaries (e.g., converting "N.W. England" to "North West England") to ensure uniformity across the dataset.
 - **Date Format Standardization**: All certification dates were converted to a consistent YYYY-MM-DD format using Pandas' to_datetime() function, with erroneous entries coerced to NaT (Not a Time) and subsequently handled.
 - **Handling Missing Data**:
     - **Imputation**: Missing geographical data were imputed based on known regional clusters of BREEAM-certified buildings. For categorical fields, mode substitution was applied where appropriate.
     - **Exclusion**: Records with critical missing fields, such as location or certification level, were excluded from specific analyses to maintain data integrity.
+      
+#### Categorization:
+- **Building Type**: Buildings were classified into categories including Residential, Commercial, Public Infrastructure, Industrial, and Others to facilitate sectoral analysis.
+- **Region**: Data was grouped based on UK regions (e.g., London, Scotland, North West) to enable regional comparative studies.
