@@ -10,10 +10,6 @@ Key findings indicate a significant increase in high-level certifications ("Exce
 ![BREEAM Outstanding Certified Assessments](links/Map_world.png)
 *Figure 1: Global map showing BREEAM-certified project locations, colour-coded by use class (e.g., Residential, Commercial).*
 
-
-[BREEAM Outstanding Certified Assessments](links/Map_UK.png)
-Figure 2. xxx 
-
 [BREEAM Outstanding Certified Assessments](links/Map_London.png)
 Figure 3. xxx 
 
@@ -63,7 +59,7 @@ Once the raw data was collected, extensive preprocessing was necessary to ensure
     - **Exclusion**: Records with critical missing fields, such as location or certification level, were excluded from specific analyses to maintain data integrity.
       
 #### Categorization:
-- **Building Type**: Buildings were classified into categories including Residential, Commercial, Public Infrastructure, Industrial, and Others to facilitate sectoral analysis.
+- **Building Type**: To facilitate sectoral analysis, buildings were classified into categories, including Residential, Commercial, Public Infrastructure, Industrial, and Others.
 - **Region**: Data was grouped based on UK regions (e.g., London, Scotland, North West) to enable regional comparative studies.
 
 ### 3. Exploratory Data Analysis (EDA)
@@ -161,6 +157,12 @@ The cleaned and processed data underwent rigorous analysis to extract meaningful
 **Observation:** The commercial and residential sectors dominate BREEAM certifications. However, there is notable growth in the public sector, particularly in infrastructure projects within Scotland and Wales.
 
 **Implication:** Increased public sector certifications indicate governmental support and incentives for sustainable development in key infrastructure areas.
+
+![BREEAM Outstanding Certified Assessments](links/Office_Outstanding.png)
+*Figure 6: Bar chart showing the number of "Outstanding" certifications in the Office sectors.*
+
+![BREEAM Outstanding Certified Assessments](links/Industrial_Outstanding.png)
+*Figure 7: Bar chart showing the number of "Outstanding" certifications in the Industrial sector.* 
 
 ### 7. Ethical Considerations
 
