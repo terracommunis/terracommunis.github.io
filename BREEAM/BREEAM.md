@@ -1,8 +1,7 @@
 # Scraping Certified BREEAM Assessments Data
-
-## Executive Summary
 Sustainability has become a paramount concern in contemporary architecture and construction, driving the adoption of various frameworks to evaluate and enhance the environmental performance of buildings. Among these, the Building Research Establishment Environmental Assessment Method (BREEAM) stands out as a leading international certification system, particularly influential in the UK and Europe. This study leverages advanced data science techniques to scrape, process, and analyze approximately 40,000 BREEAM-certified assessments from the GreenBookLive database. The objective is to uncover temporal and spatial trends, sectoral distributions, and regional concentrations of certified buildings. By doing so, the research provides actionable insights for architects, developers, and policymakers, supporting informed decision-making aligned with the UK's ambitious net-zero targets.
 
+## Executive Summary
 Key findings indicate a significant increase in high-level certifications ("Excellent" and "Outstanding") over the past five years, with the UK and the Netherlands leading certification efforts. The geographic distribution of BREEAM certifications reveals these countries' pivotal role in driving sustainability standards within Europe, while adoption is increasing in regions such as Asia (e.g., China) and the Middle East (Figure 1). Emerging clusters in the Netherlands reflect its strong commitment to sustainability, while the commercial and residential sectors dominate certifications across other regions. These insights underscore the importance of targeted policies and incentives to promote sustainable practices in underrepresented areas, contributing to the broader goal of environmental sustainability in the built environment
 
 ![BREEAM Outstanding Certified Assessments](links/Map_world.png)
