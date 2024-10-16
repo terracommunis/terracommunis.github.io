@@ -181,8 +181,22 @@ While K-Means is useful for partitioning data into a fixed number of clusters, D
 **Parameter Tuning:**
 - **Min Samples:** The minimum number of points required to form a dense region. This parameter was tuned to prevent small, isolated points from forming clusters.
   
+<p align="center">
+  <img alt="Noise Points vs eps" src="links/dbscan_minSamples.png" height="400px" />
+</p>
+<p align="center">
+  Figure 5: Noise Points vs eps for Different min_samples in DBSCAN.
+</p>
+
 - **Epsilon (eps):** The maximum distance between two points for them to be considered in the same neighborhood. The optimal value of eps was found using methods such as:
    - **K-distance graph:** A plot of the k-nearest neighbors’ distance for each point in the dataset. The optimal eps value was determined where the graph shows a sharp change in slope (the "knee" of the curve).
+
+<p align="center">
+  <img alt="Number of Clusters vs eps" src="links/dbscan_eps.png" height="400px" />
+</p>
+<p align="center">
+  Figure 6: Number of Clusters vs eps for Different min_samples in DBSCAN.
+</p>
 
 #### Evaluation of Clusters:
 
