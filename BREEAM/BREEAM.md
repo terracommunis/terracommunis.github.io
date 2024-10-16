@@ -73,11 +73,11 @@ Once the raw data was collected, extensive preprocessing was necessary to ensure
 - **Building Type**: To facilitate sectoral analysis, buildings were classified into categories, including Residential, Commercial, Public Infrastructure, Industrial, and Others.
 - **Region**: Data was grouped based on UK regions (e.g., London, Scotland, North West) to enable regional comparative studies.
 
-### 3. Exploratory Data Analysis (EDA)
+### 3. Data Analysis and Insights
 
 Exploratory Data Analysis was conducted to uncover patterns, trends, and insights within the BREEAM certifications dataset.
 
-#### Temporal Trends:
+#### Temporal Certification Trends:
 
 - **Analysis**: Time-series analysis tracked annual changes in BREEAM certification ratings over the past ten years, segmented by rating levels (Pass, Good, Very Good, Excellent, Outstanding).
 
@@ -86,8 +86,54 @@ Exploratory Data Analysis was conducted to uncover patterns, trends, and insight
 ![BREEAM Outstanding Certified Assessments](links/Office_Percentage.png)
 *Figure 5: Pie chart depicting the number of office BREEAM certifications in the UK over each year from 2013 to 2022 colour-code by rating.*
 
+#### Sectoral and Regional Distribution:
+The bar charts illustrate the **number of "Outstanding" BREEAM certifications** in the **Office** and **Industrial** sectors over time. The charts break down certifications by country, providing clear insights into the trends across different regions and building types.
 
-### Sectoral and Geospatial Analysis
+#### Offices: Outstanding BREEAM Certifications by Year and Country
+
+- **Analysis:**  
+  The office sector shows a consistent increase in the number of **Outstanding certifications** from 2012 to 2024. The United Kingdom dominates the chart, consistently maintaining the highest number of certified assessments each year. Countries such as the **Netherlands**, **France**, and **Poland** also show notable growth, contributing to the overall increase in certifications in recent years.
+
+- **Findings:**  
+  A sharp rise in certifications is observed in **2019**, with the total number reaching its highest in **2023**. This could be linked to stronger sustainability regulations and corporate commitments in these regions. The chart also shows that certifications are expanding beyond just the UK, with countries like **Romania** and **Russia** achieving certifications by 2022 and 2023, respectively.
+
+- **Implication:**  
+  The increase in certifications across multiple countries suggests that **sustainability standards** are becoming more prevalent across Europe. The UK’s sustained leadership in certifications points to ongoing governmental and corporate efforts to adhere to green building standards. Emerging countries on the list also indicate that BREEAM certifications are expanding geographically, showcasing broader adoption of sustainability in the office sector.
+
+![BREEAM Outstanding Certified Assessments](links/Office_Outstanding.png)
+*Figure 6: Bar chart showing the number of "Outstanding" certifications in the Office sector.*
+
+---
+
+#### Industrial: Outstanding BREEAM Certifications by Year and Country
+
+- **Analysis:**  
+  In the industrial sector, **the Netherlands** and **the United Kingdom** lead the certifications, with **the Netherlands** showing a clear dominance since 2019. The UK follows closely behind, demonstrating substantial growth in the number of certified industrial buildings. Countries such as **Slovakia**, **Sweden**, and **Czech Republic** also feature in the certifications, though in much smaller numbers compared to the top two.
+
+- **Findings:**  
+  The number of "Outstanding" certifications peaked in **2019** and remains relatively high through **2023**, reflecting the growing importance of sustainability in the industrial sector. The Netherlands leads the charge, contributing to the majority of certifications from 2019 to 2024. The rise in certifications in this sector suggests that **industrial buildings**, which were traditionally less focused on sustainability, are now being brought into the fold of sustainable building practices.
+
+- **Implication:**  
+  The growing number of certifications in the industrial sector highlights the increasing focus on sustainability in traditionally energy-intensive industries. The leadership of **the Netherlands** in certifications reflects strong regulatory frameworks and industrial initiatives to reduce environmental impact. Other countries joining the trend may indicate a broader European commitment to **sustainable industrial growth**.
+
+![BREEAM Outstanding Certified Assessments](Industrial_Outstanding.png)
+*Figure 7: Bar chart showing the number of "Outstanding" certifications in the Industrial sector.*
+
+---
+
+### Overall Insights:
+
+- The data from both the **Office** and **Industrial** sectors highlight the **increasing importance of sustainability** in diverse types of developments.
+- **The United Kingdom** remains a leader in BREEAM certifications, particularly in the office sector, while **the Netherlands** dominates the industrial certifications since 2019.
+- The expansion of certifications across countries like **Poland**, **Romania**, and **Slovakia** suggests growing awareness and adoption of sustainable building practices beyond traditional strongholds in the UK and Western Europe.
+
+
+
+![BREEAM Outstanding Certified Assessments](links/Map_London.png)
+*Figure 3: Detailed map of London showing BREEAM-certified project locations, color-coded by use class.*
+
+
+#### Sectoral and Geospatial Analysis
 
 **Segmentation:**  
 The data was segmented by building type and region to uncover sector-specific trends and geospatial patterns. The analysis focused on building types such as commercial, residential, industrial, and mixed-use across different regions, allowing for detailed insights into how sustainability certifications vary by sector and geography.
@@ -108,8 +154,7 @@ Using **Folium** and **GeoPandas**, interactive maps were generated to display t
   
 - The spread of **Outstanding** and **Excellent** ratings across **Belgium** and the **Netherlands** demonstrates the adoption of BREEAM standards in **mixed-use** and **industrial sectors**, indicating the broader uptake of sustainability certifications across Europe beyond just office buildings.
 
-![BREEAM Outstanding Certified Assessments](links/Map_London.png)
-*Figure 3: Detailed map of London showing BREEAM-certified project locations, color-coded by use class.*
+
   
 
 ### 4. Cluster Analysis with Machine Learning
@@ -218,37 +263,20 @@ In summary, the combination of K-Means and DBSCAN, alongside the use of multiple
 
 ### 5. Challenges and Solutions
 
-The project encountered several challenges, each addressed with specific strategies to ensure the integrity and completeness of the data.
+The project involved scraping structured data from a relatively simple website, but there were a few notable challenges related to data collection and inconsistencies, particularly for non-UK/European projects.
 
-#### Dynamic Content Loading:
+- **Dynamic Content Loading:**  
+  The website featured pagination and links to individual assessment pages for each project, which required merging the main page data with additional data from the detailed assessment pages. **Selenium** was used to handle this process, automating browser interactions to fully load dynamic content. Selenium’s WebDriver allowed interaction with JavaScript elements, ensuring that pagination and links were accessed correctly.
 
-- **Challenge:** The reliance on JavaScript for content rendering complicated the scraping process.
+- **Data Collection:**  
+  The main challenge was the need to scrape multiple pages and combine data across assessments. The links to individual assessments contained additional information that was merged with the summary data on the primary pages. Using **lmxl** and **Requests**, the data was parsed and stored efficiently. Pagination was handled by iterating over pages and collecting all necessary links to the individual project pages.
 
-- **Solution:** Utilized Selenium WebDriver to automate browser interactions, ensuring all dynamic content was fully loaded. Implemented explicit waits to handle varying load times effectively.
+- **Data Inconsistencies:**  
+  Many projects located outside of the UK/Europe had inconsistent or missing location data, especially latitude and longitude information. For over 40,000 locations, addresses were geocoded using **geopy** to retrieve approximate coordinates based on the available addresses. The accuracy of these coordinates depended on the quality of the address data, which was sometimes incomplete or ambiguous for certain international projects.
 
-#### Data Quality Issues:
+- **Ethical Compliance:**  
+  The scraping process adhered to the terms set in GreenBookLive’s robots.txt file and terms of service. The scraping rate was throttled to avoid overloading the server, and no sensitive or non-public data was accessed. Data anonymization was applied where necessary.
 
-**Challenge:** Inconsistencies in location formatting and date records hindered data standardization.
-
-**Solution:** Developed comprehensive mapping dictionaries for region standardization and employed Pandas' date parsing functions. Manual validation of a data subset ensured accuracy.
-
-#### Rate Limiting and Scalability:
-
-- **Challenge:** High-frequency HTTP requests risked triggering GreenBookLive's rate-limiting mechanisms, leading to potential IP blocking and incomplete data collection.
-
-- **Solution:** Introduced request throttling using controlled delays between requests. Implemented robust error handling and retry mechanisms to manage intermittent failures, ensuring the scraping process could resume seamlessly.
-
-#### Handling Large Datasets:
-
-- **Challenge:** Managing a dataset of approximately 40,000 records required efficient data handling to prevent memory issues.
-
-- **Solution:** Leveraged Pandas' optimized data structures and processed data in manageable chunks. Employed memory-efficient techniques such as data type optimization and selective column loading.
-
-#### Ethical Considerations and Compliance:
-
-- **Challenge:** Ensuring adherence to ethical standards and GreenBookLive's terms of service was crucial to avoid legal repercussions.
-
-- **Solution:** Reviewed GreenBookLive's robots.txt and terms of service to ensure compliance. Limited scraping rates to minimize server load and avoided accessing non-public or sensitive information. Anonymized any potentially sensitive data to protect privacy.
 
 ### 6. Data Analysis and Insights
 
@@ -270,8 +298,6 @@ The cleaned and processed data underwent rigorous analysis to extract meaningful
 ![BREEAM Outstanding Certified Assessments](links/Land_Use_Percentage.png)
 *Figure 4. xxx*
 
-
-
 The chart highlights a diversification in land use among certified buildings, with significant growth in public infrastructure and industrial sectors. This shift indicates a broader adoption of sustainability practices across various types of developments, beyond the traditional commercial and residential domains.
 
 #### Regional Disparities:
@@ -292,9 +318,6 @@ The chart highlights a diversification in land use among certified buildings, wi
 ![BREEAM Outstanding Certified Assessments](links/Industrial_Outstanding.png)
 *Figure 7: Bar chart showing the number of "Outstanding" certifications in the Industrial sector.* 
 
-### 7. Ethical Considerations
-
-The study adhered to ethical standards throughout the data collection and analysis processes. Web scraping was conducted in compliance with GreenBookLive's terms of service, ensuring minimal server load through controlled request rates. Only publicly available certification records were accessed, and any sensitive information was anonymized to protect privacy. These measures ensured that the research maintained integrity and respected data ownership rights.
 
 ### Conclusion
 
