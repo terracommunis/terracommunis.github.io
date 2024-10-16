@@ -5,7 +5,7 @@
 ## Executive Summary
 Sustainability has become a paramount concern in contemporary architecture and construction, driving the adoption of various frameworks to evaluate and enhance the environmental performance of buildings. Among these, the Building Research Establishment Environmental Assessment Method (BREEAM) stands out as a leading international certification system, particularly influential in the UK and Europe. This study leverages advanced data science techniques to scrape, process, and analyze approximately 40,000 BREEAM-certified assessments from the GreenBookLive database. The objective is to uncover temporal and spatial trends, sectoral distributions, and regional concentrations of certified buildings. By doing so, the research provides actionable insights for architects, developers, and policymakers, supporting informed decision-making aligned with the UK's ambitious net-zero targets.
 
-Key findings indicate a significant increase in high-level certifications ("Excellent" and "Outstanding") over the past five years, with the UK and the Netherlands leading certification efforts. Figure 1 highlights the geographic distribution of BREEAM certifications, demonstrating these countries' pivotal role in driving sustainability standards within Europe. Furthermore, BREEAM’s global reach is expanding, with increasing adoption in regions such as Asia (e.g., China) and the Middle East. Emerging clusters in the Netherlands reflect its strong commitment to sustainability, while the commercial and residential sectors dominate certifications across other regions. These insights underscore the importance of targeted policies and incentives to promote sustainable practices in underrepresented areas, contributing to the broader goal of environmental sustainability in the built environment.
+Key findings indicate a significant increase in high-level certifications ("Excellent" and "Outstanding") over the past five years, with the UK and the Netherlands leading certification efforts. The geographic distribution of BREEAM certifications reveals these countries' pivotal role in driving sustainability standards within Europe, while adoption is increasing in regions such as Asia (e.g., China) and the Middle East (Figure 1). Emerging clusters in the Netherlands reflect its strong commitment to sustainability, while the commercial and residential sectors dominate certifications across other regions. These insights underscore the importance of targeted policies and incentives to promote sustainable practices in underrepresented areas, contributing to the broader goal of environmental sustainability in the built environment
 
 ![BREEAM Outstanding Certified Assessments](links/Map_world.png)
 *Figure 1: Global map showing BREEAM-certified project locations, colour-coded by use class (e.g., Residential, Commercial).*
@@ -17,23 +17,30 @@ The study employs a comprehensive methodology encompassing data extraction, clea
 ### 1. Data Collection
 
 #### Web-Scraping Process
-The data extraction process involved sophisticated web scraping techniques with **Python** to retrieve BREEAM certification data from the GreenBookLive database. Given the website's dynamic nature, a combination of HTTP requests and browser automation via Selenium was employed to effectively interact with and extract data from dynamically loaded content.
+The data extraction process involved sophisticated web scraping techniques with `Python` to retrieve BREEAM certification data from the [GreenBookLive](https://www.greenbooklive.com/) database. Given the website's dynamic nature, a combination of HTTP requests and browser automation via `Selenium` was employed to effectively interact with and extract data from dynamically loaded content. Selenium is a web automation tool that allows programmatic interaction with web browsers, simulating user actions such as clicking and scrolling, which is essential for scraping dynamic websites.
 
 #### Data Description
+The dataset comprises information on BREEAM-certified buildings, detailing certifications, ratings, locations, and other attributes. Below is the detailed schema of the dataset:
 
-The dataset comprises information on BREEAM-certified buildings extracted from the GreenBookLive database. Below is the detailed schema of the dataset:
-
-| **Field Name**         | **Data Type** | **Description**                                                  |
-|------------------------|---------------|------------------------------------------------------------------|
-| **Building Name**      | String        | Name of the certified building                                  |
-| **Location**           | String        | City and region where the building is located                   |
-| **Certification Date** | Date          | Date when the BREEAM certification was awarded                  |
-| **Certification Level**| String        | Level of certification (Pass, Good, Very Good, Excellent, Outstanding) |
-| **Assessor**           | String        | Name of the assessing body                                      |
-| **Latitude**           | Float         | Geographical latitude of the building                           |
-| **Longitude**          | Float         | Geographical longitude of the building                          |
-| **Building Type**      | String        | Category of the building (Residential, Commercial, Public Infrastructure, Other) |
-| **Cluster**            | Integer       | Cluster identifier from K-Means clustering                      |
+| **Field Name**              | **Data Type** | **Description**                                                                                   |
+|-----------------------------|---------------|---------------------------------------------------------------------------------------------------|
+| **Building/Asset Name**      | String        | Name of the certified building or asset                                                           |
+| **Client/Developer**         | String        | Name of the client or developer                                                                    |
+| **Scheme**                   | String        | Certification scheme applied to the building (e.g., In-Use International)                          |
+| **Rating/Score**             | String        | Descriptive rating and score for the building (e.g., Very good 58.7%)                              |
+| **Rating**                   | String        | Final rating achieved (e.g., Very good, Good, Pass)                                                |
+| **Score**                    | Float         | Numerical score achieved in the certification (e.g., 58.70%)                                       |
+| **Stage/Valid Until**        | Date          | Date indicating until when the certification is valid                                              |
+| **Certification Number**     | String        | Unique certification number assigned to the building                                               |
+| **Assessor/Auditor**         | String        | Name of the assessor or auditor responsible for the certification                                  |
+| **Town/Postcode/Zipcode**    | String        | Town and postcode/zipcode where the building is located                                            |
+| **Country**                  | String        | Country where the building is located                                                              |
+| **NSO**                      | String        | National Scheme Operator overseeing the certification                                              |
+| **Other Information**        | String        | Additional information regarding the asset or project                                              |
+| **Project Type**             | String        | Type of project (e.g., Offices, Retail, Industrial)                                                |
+| **Rating (%)**               | Float         | Certification rating expressed as a percentage                                                     |
+| **Latitude**                 | Float         | Geographical latitude of the building                                                             |
+| **Longitude**                | Float         | Geographical longitude of the building                                                            |
 
 *Table 1: Data Schema of BREEAM-Certified Buildings Dataset.*
 
@@ -72,31 +79,44 @@ Exploratory Data Analysis was conducted to uncover patterns, trends, and insight
 
 #### Temporal Trends:
 
-- **Analysis:** Time-series analysis tracked annual changes in certification counts over the past five years.
+- **Analysis**: Time-series analysis tracked annual changes in BREEAM certification ratings over the past ten years, segmented by rating levels (Pass, Good, Very Good, Excellent, Outstanding).
 
-- **Visualization:** Line charts illustrated the upward trend in certifications, particularly highlighting increases in higher certification levels during periods of significant regulatory changes.
+- **Visualization**: Pie charts for each year depict the proportion of certifications across different rating levels from 2013 to 2022. A noticeable trend is the **steady increase in higher certification levels**, particularly **Outstanding** and **Excellent** ratings. These higher-level certifications have grown significantly over time, reflecting an industry-wide shift toward achieving greater sustainability performance in buildings. Early years such as 2013 and 2014 were dominated by "Very Good" and "Good" ratings, while by 2022, a larger portion of certifications had moved toward "Excellent" and "Outstanding" ratings (Figure 5).
 
 ![BREEAM Outstanding Certified Assessments](links/Office_Percentage.png)
-*Figure 5: Pie chart depicting the number of office BREEAM certifications over each year from 2013 to 2022 colour-code by rating.*
+*Figure 5: Pie chart depicting the number of office BREEAM certifications in the UK over each year from 2013 to 2022 colour-code by rating.*
 
 
-#### Sectoral and Geographic Analysis:
+### Sectoral and Geospatial Analysis
 
-- **Segmentation:** Data was segmented by building type and region to identify sector-specific and region-specific trends.
-
-- **Visualization:** Bar charts and histograms were created using Matplotlib and Seaborn to represent the distribution of certifications across different sectors and regions. For instance, commercial buildings showed high certification rates in London, while residential certifications surged in the North West.
-
-![BREEAM Outstanding Certified Assessments](links/Map_London.png)
-*Figure 3: Detailed map of London showing BREEAM-certified project locations, color-coded by use class.*
-
-#### Geospatial Visualization:
-
-- **Tools Utilized:** Folium and GeoPandas were employed to create interactive maps displaying the density of BREEAM-certified buildings across the UK.
-
-- **Findings:** High-density areas were identified in London and the South East, with emerging clusters in Scotland and the North West, particularly in regions experiencing urban renewal.
+**Segmentation:**  
+The data was segmented by building type and region to uncover sector-specific trends and geospatial patterns. The analysis focused on building types such as commercial, residential, industrial, and mixed-use across different regions, allowing for detailed insights into how sustainability certifications vary by sector and geography.
+  
+**Geospatial Visualization:**  
+Interactive Maps revealed the distribution of certifications across these sectors and regions. **Commercial buildings** displayed high certification rates in the **UK**, particularly in **London** and the **South East**, while **residential certifications surged** in the **North West**. Additionally, **industrial projects** showed significant activity in regions like **Belgium** and the **Netherlands**, reflecting a growing trend toward sustainable practices in various sectors.
 
 ![BREEAM Outstanding Certified Assessments](links/Map_UK.png)
 *Figure 2: Detailed map of Europe and the UK showing BREEAM-certified project locations, colour-coded by use class.*
+
+Using **Folium** and **GeoPandas**, interactive maps were generated to display the density and spatial distribution of BREEAM-certified buildings across the **UK** and **Europe**. These tools allowed for the color-coded classification of projects by use class, providing a clear visual representation of certification clusters.
+
+**Findings:**
+- High-density BREEAM-certified clusters were identified in **London** and the **South East**, with **commercial office buildings** such as **The Featherstone Building** and **Bloomberg** achieving **Outstanding** ratings (Figure 3). These regions lead in setting high sustainability standards.
+- Emerging clusters were observed in **Scotland** and the **North West**, particularly in areas undergoing urban renewal, like **Manchester** and **Glasgow**, where **residential** and **mixed-use developments** have increased certifications.
+  
+- In **Europe**, expanding certification clusters were noted in **Germany**, **the Netherlands**, and **France** (Figure 2). These regions have seen growth in both **industrial** and **commercial** BREEAM-certified projects, with Germany focusing heavily on industrial developments and the Netherlands on office spaces.
+  
+- The spread of **Outstanding** and **Excellent** ratings across **Belgium** and the **Netherlands** demonstrates the adoption of BREEAM standards in **mixed-use** and **industrial sectors**, indicating the broader uptake of sustainability certifications across Europe beyond just office buildings.
+
+![BREEAM Outstanding Certified Assessments](links/Map_London.png)
+*Figure 3: Detailed map of London showing BREEAM-certified project locations, color-coded by use class.*
+  
+
+
+
+
+
+
 
 ### 4. Cluster Analysis with Machine Learning
 
@@ -112,6 +132,9 @@ To gain deeper insights into the relationships between building type, certificat
 #### Evaluation of Clusters:
 
 - **Insights:** Clusters revealed high-performing commercial buildings concentrated in central London and emerging residential clusters in northern regions such as Manchester and Liverpool. Public infrastructure projects, including schools and hospitals, were predominantly clustered in Scotland and Wales, reflecting regional government initiatives promoting sustainability.
+
+![BREEAM Outstanding Certified Assessments](links/clustering.png)
+*Figure 2: Detailed map of Europe and the UK showing BREEAM-certified project locations, colour-coded by use class.*
 
 ### 5. Challenges and Solutions
 
