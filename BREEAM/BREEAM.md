@@ -1,5 +1,3 @@
-# $\color{red}{\textsf{[DRAFT]}}$
-
 # Scraping Certified BREEAM Assessments Data
 
 ## Executive Summary
@@ -89,10 +87,10 @@ Exploratory Data Analysis was conducted to uncover patterns, trends, and insight
 #### Sectoral and Regional Distribution:
 The bar charts illustrate the **number of "Outstanding" BREEAM certifications** in the **Office** and **Industrial** sectors over time. The charts break down certifications by country, providing clear insights into the trends across different regions and building types.
 
-#### Offices: Outstanding BREEAM Certifications by Year and Country (Figure 3)
+#### Offices: Outstanding BREEAM Certifications by Year and Country
 
 - **Analysis:**  
-  The office sector shows a consistent increase in the number of **Outstanding certifications** from 2012 to 2024. The United Kingdom dominates the chart, consistently maintaining the highest number of certified assessments each year. Countries such as the **Netherlands**, **France**, and **Poland** also show notable growth, contributing to the overall increase in certifications in recent years.
+  The office sector shows a consistent increase in the number of **Outstanding certifications** from 2012 to 2024 (Figure 3). The United Kingdom dominates the chart, consistently maintaining the highest number of certified assessments each year. Countries such as the **Netherlands**, **France**, and **Poland** also show notable growth, contributing to the overall increase in certifications in recent years.
 
 - **Findings:**  
   A sharp rise in certifications is observed in 2021, with the total number reaching its highest in **2023**. This could be linked to stronger sustainability regulations and corporate commitments in these regions. The chart also shows that certifications are expanding beyond just the UK, with countries like **Romania** and **Russia** achieving certifications by 2022 and 2023, respectively.
@@ -103,10 +101,10 @@ The bar charts illustrate the **number of "Outstanding" BREEAM certifications** 
 ![BREEAM Outstanding Certified Assessments](links/Office_Outstanding.png)
 *Figure 3: Bar chart showing the number of "Outstanding" certifications in the Office sector.*
 
-#### Industrial: Outstanding BREEAM Certifications by Year and Country (Figure 4)
+#### Industrial: Outstanding BREEAM Certifications by Year and Country
 
 - **Analysis:**  
-  In the industrial sector, **the Netherlands** and **the United Kingdom** lead the certifications, with **the Netherlands** showing a clear dominance since 2019. The UK follows closely behind, demonstrating substantial growth in the number of certified industrial buildings. Countries such as **Slovakia**, **Sweden**, and **Czech Republic** also feature in the certifications, though in much smaller numbers compared to the top two.
+  In the industrial sector, **the Netherlands** and **the United Kingdom** lead the certifications, with **the Netherlands** showing a clear dominance since 2019 (Figure 4). The UK follows closely behind, demonstrating substantial growth in the number of certified industrial buildings. Countries such as **Slovakia**, **Sweden**, and **Czech Republic** also feature in the certifications, though in much smaller numbers compared to the top two.
 
 - **Findings:**  
   The number of "Outstanding" certifications peaked in **2023**, reflecting the growing importance of sustainability in the industrial sector. The Netherlands leads the charge, contributing to the majority of certifications from 2019 to 2024. The rise in certifications in this sector suggests that **industrial buildings**, which were traditionally less focused on sustainability, are now being brought into the fold of sustainable building practices.
@@ -176,7 +174,7 @@ The optimal number of clusters (*k*) for K-Means was identified using several te
   <img alt="Elbow Method" src="links/elbowMethod.png" height="400px" />
 </p>
 <p align="center">
-  Figure 4: Elbow Method for Determining Optimal Number of Clusters (k).
+  Figure 8: Elbow Method for Determining Optimal Number of Clusters (k).
 </p>
    
 2. **Silhouette Scores:** This metric measures how similar an object is to its own cluster compared to other clusters. The silhouette score ranges from -1 to 1, with higher values indicating better-defined clusters. It was used to validate the optimal number of clusters by measuring cluster cohesion and separation.
@@ -185,7 +183,7 @@ The optimal number of clusters (*k*) for K-Means was identified using several te
   <img alt="Silhouette Score" src="links/silhuette.png" height="400px" />
 </p>
 <p align="center">
-  Figure 2: Silhouette Score indicating the cohesion and separation of clusters.
+  Figure 9: Silhouette Score indicating the cohesion and separation of clusters.
 </p>
 
 3. **Calinski-Harabasz Index (Variance Ratio Criterion):** This index considers the ratio of within-cluster dispersion to between-cluster dispersion. Higher values indicate better-defined clusters.
@@ -194,7 +192,7 @@ The optimal number of clusters (*k*) for K-Means was identified using several te
   <img alt="Calinski Harabasz Score" src="links/calinski_harabasz.png" height="400px" />
 </p>
 <p align="center">
-  Figure 3: Calinski-Harabasz Index representing cluster compactness.
+  Figure 10: Calinski-Harabasz Index representing cluster compactness.
 </p> 
 
 6. **Davies-Bouldin Index:** This metric evaluates cluster separation by comparing the average distance between clusters with the size of clusters themselves. Lower values of the Davies-Bouldin index indicate better separation between clusters.
@@ -205,7 +203,7 @@ These methods helped ensure meaningful and distinct groupings of the buildings b
   <img alt="Davies Bouldin Score" src="links/davies_bouldin.png" height="400px" />
 </p>
 <p align="center">
-  Figure 4: Davies-Bouldin Index measuring cluster separation.
+  Figure 11: Davies-Bouldin Index measuring cluster separation.
 </p> 
 
 #### DBSCAN (Density-Based Spatial Clustering of Applications with Noise):
@@ -220,7 +218,7 @@ While K-Means is useful for partitioning data into a fixed number of clusters, D
   <img alt="Noise Points vs eps" src="links/dbscan_minSamples.png" height="400px" />
 </p>
 <p align="center">
-  Figure 5: Noise Points vs eps for Different min_samples in DBSCAN.
+  Figure 12: Noise Points vs eps for Different min_samples in DBSCAN.
 </p>
 
 - **Epsilon (eps):** The maximum distance between two points for them to be considered in the same neighborhood. The optimal value of eps was found using methods such as:
@@ -230,7 +228,7 @@ While K-Means is useful for partitioning data into a fixed number of clusters, D
   <img alt="Number of Clusters vs eps" src="links/dbscan_eps.png" height="400px" />
 </p>
 <p align="center">
-  Figure 6: Number of Clusters vs eps for Different min_samples in DBSCAN.
+  Figure 13: Number of Clusters vs eps for Different min_samples in DBSCAN.
 </p>
 
 #### Evaluation of Clusters:
@@ -266,47 +264,6 @@ The project involved scraping structured data from a relatively simple website, 
 
 - **Ethical Compliance:**  
   The scraping process adhered to the terms set in GreenBookLive’s robots.txt file and terms of service. The scraping rate was throttled to avoid overloading the server, and no sensitive or non-public data was accessed. Data anonymization was applied where necessary.
-
-
-### 6. Data Analysis and Insights
-
-The cleaned and processed data underwent rigorous analysis to extract meaningful insights into BREEAM certifications.
-
-#### Temporal Certification Trends:
-
-**Observation:** The number of buildings receiving BREEAM certifications has steadily increased over the past five years, with a significant rise in higher-level certifications ("Excellent" and "Outstanding").
-
-**Implication:** This trend aligns with increased regulatory pressures and heightened industry commitment to sustainability standards.
-
-#### **Land Use and Sectoral Distribution**
-
-- **Analysis:** The dataset was categorized by building type (residential, commercial, public infrastructure, industrial) to assess land use distribution trends.
-
-- **Findings:** While commercial and residential buildings remain dominant, there is a noticeable increase in certifications within the public and industrial sectors.
-
-
-![BREEAM Outstanding Certified Assessments](links/Land_Use_Percentage.png)
-*Figure 4. xxx*
-
-The chart highlights a diversification in land use among certified buildings, with significant growth in public infrastructure and industrial sectors. This shift indicates a broader adoption of sustainability practices across various types of developments, beyond the traditional commercial and residential domains.
-
-#### Regional Disparities:
-
-**Observation:** London and the South East maintain the highest number of certified buildings, while regions like Scotland and the North West are emerging as new sustainability hotspots.
-
-**Implication:** Regional growth in certifications suggests effective local government initiatives and urban regeneration efforts promoting sustainable construction.
-
-#### Sectoral Breakdown:
-
-**Observation:** The commercial and residential sectors dominate BREEAM certifications. However, there is notable growth in the public sector, particularly in infrastructure projects within Scotland and Wales.
-
-**Implication:** Increased public sector certifications indicate governmental support and incentives for sustainable development in key infrastructure areas.
-
-![BREEAM Outstanding Certified Assessments](links/Office_Outstanding.png)
-*Figure 6: Bar chart showing the number of "Outstanding" certifications in the Office sector.*
-
-![BREEAM Outstanding Certified Assessments](links/Industrial_Outstanding.png)
-*Figure 7: Bar chart showing the number of "Outstanding" certifications in the Industrial sector.* 
 
 
 ### Conclusion
