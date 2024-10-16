@@ -112,29 +112,67 @@ Using **Folium** and **GeoPandas**, interactive maps were generated to display t
 *Figure 3: Detailed map of London showing BREEAM-certified project locations, color-coded by use class.*
   
 
-
-
-
-
-
-
 ### 4. Cluster Analysis with Machine Learning
 
-To gain deeper insights into the relationships between building type, certification levels, and geographic distribution, unsupervised machine learning techniques were applied.
+To gain deeper insights into the relationships between building type, certification levels, and geographic distribution, unsupervised machine learning techniques such as **K-Means Clustering** and **DBSCAN** (Density-Based Spatial Clustering of Applications with Noise) were applied. These methods helped reveal patterns and form distinct groups within the dataset based on features such as certification level, location, and building type.
+
+![BREEAM Outstanding Certified Assessments](links/clustering.png)
+*Figure 2: Clustering of BREEAM-Certified Projects Across Europe and the UK Using K-Means and DBSCAN, Color-Coded by Use Class*
 
 #### K-Means Clustering:
-- **Objective:** Group buildings based on certification level, type, and location to identify distinct clusters within the dataset.
 
-- **Feature Engineering:** Key features included certification rating, building type, geographic coordinates, and year of certification. These features were standardized to ensure uniformity across the dataset.
+**Objective:**  
+The goal of K-Means clustering was to group buildings based on their certification rating, type, and geographic location. By identifying distinct clusters, the analysis aimed to reveal patterns in certification performance and geographic concentration.
 
-- **Cluster Determination:** The optimal number of clusters was identified using the Elbow Method and silhouette scores, ensuring meaningful and distinct groupings.
+**Feature Engineering:**  
+Key features used in the clustering model included:
+- **Certification rating** (e.g., Pass, Good, Very Good, Excellent, Outstanding)
+- **Building type** (e.g., Commercial, Residential, Industrial)
+- **Geographic coordinates** (latitude, longitude)
+- **Year of certification**
+
+These features were standardized to ensure uniformity across the dataset, ensuring that no single feature disproportionately influenced the clustering results.
+
+**Cluster Determination:**  
+The optimal number of clusters (*k*) for K-Means was identified using several techniques:
+1. **Elbow Method:** This method plots the total within-cluster sum of squares (inertia) against different values of *k*. The optimal number of clusters is determined by identifying the "elbow point" where further increases in *k* result in only marginal improvements in inertia.
+   
+2. **Silhouette Scores:** This metric measures how similar an object is to its own cluster compared to other clusters. The silhouette score ranges from -1 to 1, with higher values indicating better-defined clusters. It was used to validate the optimal number of clusters by measuring cluster cohesion and separation.
+
+3. **Calinski-Harabasz Index (Variance Ratio Criterion):** This index considers the ratio of within-cluster dispersion to between-cluster dispersion. Higher values indicate better-defined clusters.
+
+4. **Davies-Bouldin Index:** This metric evaluates cluster separation by comparing the average distance between clusters with the size of clusters themselves. Lower values of the Davies-Bouldin index indicate better separation between clusters.
+
+These methods helped ensure meaningful and distinct groupings of the buildings based on their certification, type, and location.
+
+#### DBSCAN (Density-Based Spatial Clustering of Applications with Noise):
+
+**Objective:**  
+While K-Means is useful for partitioning data into a fixed number of clusters, DBSCAN was applied to identify clusters of varying density, particularly useful for spatial data. It allowed for the discovery of clusters without needing to predefine the number of clusters, making it well-suited for detecting patterns in geographic data.
+
+**Parameter Tuning:**
+- **Min Samples:** The minimum number of points required to form a dense region. This parameter was tuned to prevent small, isolated points from forming clusters.
+  
+- **Epsilon (eps):** The maximum distance between two points for them to be considered in the same neighborhood. The optimal value of eps was found using methods such as:
+   - **K-distance graph:** A plot of the k-nearest neighbors’ distance for each point in the dataset. The optimal eps value was determined where the graph shows a sharp change in slope (the "knee" of the curve).
 
 #### Evaluation of Clusters:
 
-- **Insights:** Clusters revealed high-performing commercial buildings concentrated in central London and emerging residential clusters in northern regions such as Manchester and Liverpool. Public infrastructure projects, including schools and hospitals, were predominantly clustered in Scotland and Wales, reflecting regional government initiatives promoting sustainability.
+**Inertia:**  
+For K-Means, **inertia** (the sum of squared distances of samples to their closest cluster center) was minimized to ensure tight clustering. Lower inertia values correspond to better-fitting clusters but are evaluated in combination with other metrics to avoid overfitting.
 
-![BREEAM Outstanding Certified Assessments](links/clustering.png)
-*Figure 2: Detailed map of Europe and the UK showing BREEAM-certified project locations, colour-coded by use class.*
+**Insights:**  
+The clustering analysis provided the following key insights:
+- **High-performing commercial buildings** were concentrated in **central London**, reflecting the city's leadership in sustainability-driven development. These clusters consisted of projects with higher BREEAM ratings such as "Excellent" and "Outstanding."
+  
+- **Emerging residential clusters** were identified in **northern regions**, particularly in **Manchester** and **Liverpool**, where large-scale housing developments are undergoing certification. These clusters reflected the increasing focus on sustainable residential buildings.
+  
+- **Public infrastructure projects**, including schools and hospitals, were predominantly clustered in **Scotland** and **Wales**. This reflects regional government initiatives promoting sustainability through public sector investment in green infrastructure.
+
+- **DBSCAN Clusters:** The DBSCAN algorithm detected geographic clusters of varying densities, with prominent clusters forming around major urban areas, while less dense regions like rural areas showed fewer certifications. It also effectively identified isolated projects in regions undergoing urban development without forcing them into arbitrary cluster boundaries, as can happen with K-Means.
+
+In summary, the combination of K-Means and DBSCAN, alongside the use of multiple evaluation metrics such as the **Elbow Method**, **Silhouette Scores**, **Calinski-Harabasz Index**, **Davies-Bouldin Index**, and **inertia**, provided robust and insightful clustering results. These insights help identify regions and sectors leading in sustainability and reveal geographic trends in building certification that can inform future urban planning and policy development.
+
 
 ### 5. Challenges and Solutions
 
