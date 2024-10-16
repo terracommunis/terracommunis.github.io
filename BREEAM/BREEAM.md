@@ -95,7 +95,7 @@ The bar charts illustrate the **number of "Outstanding" BREEAM certifications** 
   The office sector shows a consistent increase in the number of **Outstanding certifications** from 2012 to 2024. The United Kingdom dominates the chart, consistently maintaining the highest number of certified assessments each year. Countries such as the **Netherlands**, **France**, and **Poland** also show notable growth, contributing to the overall increase in certifications in recent years.
 
 - **Findings:**  
-  A sharp rise in certifications is observed in **2019**, with the total number reaching its highest in **2023**. This could be linked to stronger sustainability regulations and corporate commitments in these regions. The chart also shows that certifications are expanding beyond just the UK, with countries like **Romania** and **Russia** achieving certifications by 2022 and 2023, respectively.
+  A sharp rise in certifications is observed in 2021, with the total number reaching its highest in **2023**. This could be linked to stronger sustainability regulations and corporate commitments in these regions. The chart also shows that certifications are expanding beyond just the UK, with countries like **Romania** and **Russia** achieving certifications by 2022 and 2023, respectively.
 
 - **Implication:**  
   The increase in certifications across multiple countries suggests that **sustainability standards** are becoming more prevalent across Europe. The UK’s sustained leadership in certifications points to ongoing governmental and corporate efforts to adhere to green building standards. Emerging countries on the list also indicate that BREEAM certifications are expanding geographically, showcasing broader adoption of sustainability in the office sector.
@@ -103,59 +103,49 @@ The bar charts illustrate the **number of "Outstanding" BREEAM certifications** 
 ![BREEAM Outstanding Certified Assessments](links/Office_Outstanding.png)
 *Figure 6: Bar chart showing the number of "Outstanding" certifications in the Office sector.*
 
----
-
 #### Industrial: Outstanding BREEAM Certifications by Year and Country
 
 - **Analysis:**  
   In the industrial sector, **the Netherlands** and **the United Kingdom** lead the certifications, with **the Netherlands** showing a clear dominance since 2019. The UK follows closely behind, demonstrating substantial growth in the number of certified industrial buildings. Countries such as **Slovakia**, **Sweden**, and **Czech Republic** also feature in the certifications, though in much smaller numbers compared to the top two.
 
 - **Findings:**  
-  The number of "Outstanding" certifications peaked in **2019** and remains relatively high through **2023**, reflecting the growing importance of sustainability in the industrial sector. The Netherlands leads the charge, contributing to the majority of certifications from 2019 to 2024. The rise in certifications in this sector suggests that **industrial buildings**, which were traditionally less focused on sustainability, are now being brought into the fold of sustainable building practices.
+  The number of "Outstanding" certifications peaked in **2023**, reflecting the growing importance of sustainability in the industrial sector. The Netherlands leads the charge, contributing to the majority of certifications from 2019 to 2024. The rise in certifications in this sector suggests that **industrial buildings**, which were traditionally less focused on sustainability, are now being brought into the fold of sustainable building practices.
 
 - **Implication:**  
   The growing number of certifications in the industrial sector highlights the increasing focus on sustainability in traditionally energy-intensive industries. The leadership of **the Netherlands** in certifications reflects strong regulatory frameworks and industrial initiatives to reduce environmental impact. Other countries joining the trend may indicate a broader European commitment to **sustainable industrial growth**.
 
-![BREEAM Outstanding Certified Assessments](Industrial_Outstanding.png)
+![BREEAM Outstanding Certified Assessments](links/Industrial_Outstanding.png)
 *Figure 7: Bar chart showing the number of "Outstanding" certifications in the Industrial sector.*
 
----
-
-### Overall Insights:
+- **Overall Insights**:
 
 - The data from both the **Office** and **Industrial** sectors highlight the **increasing importance of sustainability** in diverse types of developments.
 - **The United Kingdom** remains a leader in BREEAM certifications, particularly in the office sector, while **the Netherlands** dominates the industrial certifications since 2019.
 - The expansion of certifications across countries like **Poland**, **Romania**, and **Slovakia** suggests growing awareness and adoption of sustainable building practices beyond traditional strongholds in the UK and Western Europe.
 
 
-
-![BREEAM Outstanding Certified Assessments](links/Map_London.png)
-*Figure 3: Detailed map of London showing BREEAM-certified project locations, color-coded by use class.*
-
-
 #### Sectoral and Geospatial Analysis
 
-**Segmentation:**  
-The data was segmented by building type and region to uncover sector-specific trends and geospatial patterns. The analysis focused on building types such as commercial, residential, industrial, and mixed-use across different regions, allowing for detailed insights into how sustainability certifications vary by sector and geography.
-  
-**Geospatial Visualization:**  
-Interactive Maps revealed the distribution of certifications across these sectors and regions. **Commercial buildings** displayed high certification rates in the **UK**, particularly in **London** and the **South East**, while **residential certifications surged** in the **North West**. Additionally, **industrial projects** showed significant activity in regions like **Belgium** and the **Netherlands**, reflecting a growing trend toward sustainable practices in various sectors.
+The data was segmented by building type and region to uncover sector-specific trends and geospatial patterns. The analysis focused on **commercial**, **residential**, **industrial**, and **mixed-use** buildings across different regions, allowing for detailed insights into how sustainability certifications vary by sector and geography.
 
-![BREEAM Outstanding Certified Assessments](links/Map_UK.png)
+Interactive maps were generated using **Folium** and **GeoPandas** to display the density and spatial distribution of BREEAM-certified buildings. **Commercial buildings** in **London** and the **South East** demonstrated particularly high certification rates.
+
+- **Findings in London**:  
+  High-density BREEAM-certified clusters were identified, with **commercial office buildings** such as **The Featherstone Building** and **Bloomberg** achieving **Outstanding** ratings. These areas lead in setting high sustainability standards for office spaces. 
+
+![BREEAM Outstanding Certified Assessments](links/Map_London.png)  
+*Figure 3: Detailed map of London showing BREEAM-certified project locations, color-coded by use class.*
+
+The distribution of certifications across the **UK** and **Europe** was further explored, revealing sector-specific trends. The maps showed that while **London** and the **South East** lead in commercial certifications, **Scotland**, the **North West**, and regions across **Europe** have seen increasing certifications in **residential**, **mixed-use**, and **industrial** projects.
+
+- **UK and European Findings**:
+  - **Residential certifications** surged in the **North West** and **Scotland**, particularly in areas undergoing urban renewal, such as **Manchester** and **Glasgow**.
+  - **Industrial projects** showed significant activity in regions like **Belgium** and the **Netherlands**, reflecting a growing trend toward sustainability in traditionally energy-intensive sectors.
+  - Expanding certification clusters were noted in **Germany**, **the Netherlands**, and **France**, with Germany focusing heavily on **industrial developments** and the Netherlands on **office spaces**.
+  - The spread of **Outstanding** and **Excellent** ratings across **Belgium** and the **Netherlands** demonstrates the broader uptake of BREEAM standards in **mixed-use** and **industrial sectors**, beyond just commercial buildings.
+
+![BREEAM Outstanding Certified Assessments](links/Map_UK.png)  
 *Figure 2: Detailed map of Europe and the UK showing BREEAM-certified project locations, colour-coded by use class.*
-
-Using **Folium** and **GeoPandas**, interactive maps were generated to display the density and spatial distribution of BREEAM-certified buildings across the **UK** and **Europe**. These tools allowed for the color-coded classification of projects by use class, providing a clear visual representation of certification clusters.
-
-**Findings:**
-- High-density BREEAM-certified clusters were identified in **London** and the **South East**, with **commercial office buildings** such as **The Featherstone Building** and **Bloomberg** achieving **Outstanding** ratings (Figure 3). These regions lead in setting high sustainability standards.
-- Emerging clusters were observed in **Scotland** and the **North West**, particularly in areas undergoing urban renewal, like **Manchester** and **Glasgow**, where **residential** and **mixed-use developments** have increased certifications.
-  
-- In **Europe**, expanding certification clusters were noted in **Germany**, **the Netherlands**, and **France** (Figure 2). These regions have seen growth in both **industrial** and **commercial** BREEAM-certified projects, with Germany focusing heavily on industrial developments and the Netherlands on office spaces.
-  
-- The spread of **Outstanding** and **Excellent** ratings across **Belgium** and the **Netherlands** demonstrates the adoption of BREEAM standards in **mixed-use** and **industrial sectors**, indicating the broader uptake of sustainability certifications across Europe beyond just office buildings.
-
-
-  
 
 ### 4. Cluster Analysis with Machine Learning
 
