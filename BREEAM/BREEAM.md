@@ -81,15 +81,15 @@ Exploratory Data Analysis was conducted to uncover patterns, trends, and insight
 
 - **Analysis**: Time-series analysis tracked annual changes in BREEAM certification ratings over the past ten years, segmented by rating levels (Pass, Good, Very Good, Excellent, Outstanding).
 
-- **Visualization**: Pie charts for each year depict the proportion of certifications across different rating levels from 2013 to 2022. A noticeable trend is the **steady increase in higher certification levels**, particularly **Outstanding** and **Excellent** ratings. These higher-level certifications have grown significantly over time, reflecting an industry-wide shift toward achieving greater sustainability performance in buildings. Early years, such as 2013 and 2014, were dominated by "Very Good" and "Good" ratings, while by 2022, a larger portion of certifications had moved toward "Excellent" and "Outstanding" ratings (Figure 5).
+- **Visualization**: Pie charts for each year depict the proportion of certifications across different rating levels from 2013 to 2022. A noticeable trend is the **steady increase in higher certification levels**, particularly **Outstanding** and **Excellent** ratings. These higher-level certifications have grown significantly over time, reflecting an industry-wide shift toward achieving greater sustainability performance in buildings. Early years, such as 2013 and 2014, were dominated by "Very Good" and "Good" ratings, while by 2022, a larger portion of certifications had moved toward "Excellent" and "Outstanding" ratings (Figure 2).
 
 ![BREEAM Outstanding Certified Assessments](links/Office_Percentage.png)
-*Figure 5: Pie chart depicting the number of office BREEAM certifications in the UK over each year from 2013 to 2022 colour-code by rating.*
+*Figure 2: Pie chart depicting the number of office BREEAM certifications in the UK over each year from 2013 to 2022 colour-code by rating.*
 
 #### Sectoral and Regional Distribution:
 The bar charts illustrate the **number of "Outstanding" BREEAM certifications** in the **Office** and **Industrial** sectors over time. The charts break down certifications by country, providing clear insights into the trends across different regions and building types.
 
-#### Offices: Outstanding BREEAM Certifications by Year and Country
+#### Offices: Outstanding BREEAM Certifications by Year and Country (Figure 3)
 
 - **Analysis:**  
   The office sector shows a consistent increase in the number of **Outstanding certifications** from 2012 to 2024. The United Kingdom dominates the chart, consistently maintaining the highest number of certified assessments each year. Countries such as the **Netherlands**, **France**, and **Poland** also show notable growth, contributing to the overall increase in certifications in recent years.
@@ -101,9 +101,9 @@ The bar charts illustrate the **number of "Outstanding" BREEAM certifications** 
   The increase in certifications across multiple countries suggests that **sustainability standards** are becoming more prevalent across Europe. The UK’s sustained leadership in certifications points to ongoing governmental and corporate efforts to adhere to green building standards. Emerging countries on the list also indicate that BREEAM certifications are expanding geographically, showcasing broader adoption of sustainability in the office sector.
 
 ![BREEAM Outstanding Certified Assessments](links/Office_Outstanding.png)
-*Figure 6: Bar chart showing the number of "Outstanding" certifications in the Office sector.*
+*Figure 3: Bar chart showing the number of "Outstanding" certifications in the Office sector.*
 
-#### Industrial: Outstanding BREEAM Certifications by Year and Country
+#### Industrial: Outstanding BREEAM Certifications by Year and Country (Figure 4)
 
 - **Analysis:**  
   In the industrial sector, **the Netherlands** and **the United Kingdom** lead the certifications, with **the Netherlands** showing a clear dominance since 2019. The UK follows closely behind, demonstrating substantial growth in the number of certified industrial buildings. Countries such as **Slovakia**, **Sweden**, and **Czech Republic** also feature in the certifications, though in much smaller numbers compared to the top two.
@@ -115,7 +115,7 @@ The bar charts illustrate the **number of "Outstanding" BREEAM certifications** 
   The growing number of certifications in the industrial sector highlights the increasing focus on sustainability in traditionally energy-intensive industries. The leadership of **the Netherlands** in certifications reflects strong regulatory frameworks and industrial initiatives to reduce environmental impact. Other countries joining the trend may indicate a broader European commitment to **sustainable industrial growth**.
 
 ![BREEAM Outstanding Certified Assessments](links/Industrial_Outstanding.png)
-*Figure 7: Bar chart showing the number of "Outstanding" certifications in the Industrial sector.*
+*Figure 4: Bar chart showing the number of "Outstanding" certifications in the Industrial sector.*
 
 - **Overall Insights**:
 
@@ -131,12 +131,12 @@ The data was segmented by building type and region to uncover sector-specific tr
 Interactive maps were generated using **Folium** and **GeoPandas** to display the density and spatial distribution of BREEAM-certified buildings. **Commercial buildings** in **London** and the **South East** demonstrated particularly high certification rates.
 
 - **Findings in London**:  
-  High-density BREEAM-certified clusters were identified, with **commercial office buildings** such as **The Featherstone Building** and **Bloomberg** achieving **Outstanding** ratings. These areas lead in setting high sustainability standards for office spaces. 
+  High-density BREEAM-certified clusters were identified, with **commercial office buildings** such as **The Featherstone Building** and **Bloomberg** achieving **Outstanding** ratings ((Figure 5). These areas lead in setting high sustainability standards for office spaces. 
 
 ![BREEAM Outstanding Certified Assessments](links/Map_London.png)  
-*Figure 3: Detailed map of London showing BREEAM-certified project locations, color-coded by use class.*
+*Figure 5: Detailed map of London showing BREEAM-certified project locations, color-coded by use class.*
 
-The distribution of certifications across the **UK** and **Europe** was further explored, revealing sector-specific trends. The maps showed that while **London** and the **South East** lead in commercial certifications, **Scotland**, the **North West**, and regions across **Europe** have seen increasing certifications in **residential**, **mixed-use**, and **industrial** projects.
+The distribution of certifications across the **UK** and **Europe** was further explored, revealing sector-specific trends. The maps showed that while **London** and the **South East** lead in commercial certifications (Figure 6), **Scotland**, the **North West**, and regions across **Europe** have seen increasing certifications in **residential**, **mixed-use**, and **industrial** projects.
 
 - **UK and European Findings**:
   - **Residential certifications** surged in the **North West** and **Scotland**, particularly in areas undergoing urban renewal, such as **Manchester** and **Glasgow**.
@@ -145,14 +145,14 @@ The distribution of certifications across the **UK** and **Europe** was further 
   - The spread of **Outstanding** and **Excellent** ratings across **Belgium** and the **Netherlands** demonstrates the broader uptake of BREEAM standards in **mixed-use** and **industrial sectors**, beyond just commercial buildings.
 
 ![BREEAM Outstanding Certified Assessments](links/Map_UK.png)  
-*Figure 2: Detailed map of Europe and the UK showing BREEAM-certified project locations, colour-coded by use class.*
+*Figure 6: Detailed map of Europe and the UK showing BREEAM-certified project locations, colour-coded by use class.*
 
 ### 4. Cluster Analysis with Machine Learning
 
 To gain deeper insights into the relationships between building type, certification levels, and geographic distribution, unsupervised machine learning techniques such as **K-Means Clustering** and **DBSCAN** (Density-Based Spatial Clustering of Applications with Noise) were applied. These methods helped reveal patterns and form distinct groups within the dataset based on features such as certification level, location, and building type.
 
 ![BREEAM Outstanding Certified Assessments](links/clustering.png)
-*Figure 2: Clustering of BREEAM-Certified Projects Across Europe and the UK Using K-Means and DBSCAN, Color-Coded by Use Class*
+*Figure 7: Clustering of BREEAM-Certified Projects Across Europe and the UK Using K-Means and DBSCAN, Color-Coded by Use Class*
 
 #### K-Means Clustering:
 
