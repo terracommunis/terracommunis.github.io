@@ -81,7 +81,7 @@ Exploratory Data Analysis was conducted to uncover patterns, trends, and insight
 
 - **Analysis**: Time-series analysis tracked annual changes in BREEAM certification ratings over the past ten years, segmented by rating levels (Pass, Good, Very Good, Excellent, Outstanding).
 
-- **Visualization**: Pie charts for each year depict the proportion of certifications across different rating levels from 2013 to 2022. A noticeable trend is the **steady increase in higher certification levels**, particularly **Outstanding** and **Excellent** ratings. These higher-level certifications have grown significantly over time, reflecting an industry-wide shift toward achieving greater sustainability performance in buildings. Early years such as 2013 and 2014 were dominated by "Very Good" and "Good" ratings, while by 2022, a larger portion of certifications had moved toward "Excellent" and "Outstanding" ratings (Figure 5).
+- **Visualization**: Pie charts for each year depict the proportion of certifications across different rating levels from 2013 to 2022. A noticeable trend is the **steady increase in higher certification levels**, particularly **Outstanding** and **Excellent** ratings. These higher-level certifications have grown significantly over time, reflecting an industry-wide shift toward achieving greater sustainability performance in buildings. Early years, such as 2013 and 2014, were dominated by "Very Good" and "Good" ratings, while by 2022, a larger portion of certifications had moved toward "Excellent" and "Outstanding" ratings (Figure 5).
 
 ![BREEAM Outstanding Certified Assessments](links/Office_Percentage.png)
 *Figure 5: Pie chart depicting the number of office BREEAM certifications in the UK over each year from 2013 to 2022 colour-code by rating.*
@@ -135,15 +135,43 @@ These features were standardized to ensure uniformity across the dataset, ensuri
 
 **Cluster Determination:**  
 The optimal number of clusters (*k*) for K-Means was identified using several techniques:
-1. **Elbow Method:** This method plots the total within-cluster sum of squares (inertia) against different values of *k*. The optimal number of clusters is determined by identifying the "elbow point" where further increases in *k* result in only marginal improvements in inertia.
+1. **Elbow Method:** This method plots the total within-cluster sum of squares (inertia) against different values of k. The optimal number of clusters is determined by identifying the "elbow point," where the graph starts to flatten, indicating diminishing returns with additional clusters.
+
+<p align="center">
+  <img alt="Elbow Method" src="links/elbowMethod.png" height="400px" />
+</p>
+<p align="center">
+  Figure 4: Elbow Method for Determining Optimal Number of Clusters (k).
+</p>
    
 2. **Silhouette Scores:** This metric measures how similar an object is to its own cluster compared to other clusters. The silhouette score ranges from -1 to 1, with higher values indicating better-defined clusters. It was used to validate the optimal number of clusters by measuring cluster cohesion and separation.
 
+<p align="center">
+  <img alt="Silhouette Score" src="links/silhuette.png" height="400px" />
+</p>
+<p align="center">
+  Figure 2: Silhouette Score indicating the cohesion and separation of clusters.
+</p>
+
 3. **Calinski-Harabasz Index (Variance Ratio Criterion):** This index considers the ratio of within-cluster dispersion to between-cluster dispersion. Higher values indicate better-defined clusters.
 
-4. **Davies-Bouldin Index:** This metric evaluates cluster separation by comparing the average distance between clusters with the size of clusters themselves. Lower values of the Davies-Bouldin index indicate better separation between clusters.
+<p align="center">
+  <img alt="Calinski Harabasz Score" src="links/calinski_harabasz.png" height="400px" />
+</p>
+<p align="center">
+  Figure 3: Calinski-Harabasz Index representing cluster compactness.
+</p> 
+
+6. **Davies-Bouldin Index:** This metric evaluates cluster separation by comparing the average distance between clusters with the size of clusters themselves. Lower values of the Davies-Bouldin index indicate better separation between clusters.
 
 These methods helped ensure meaningful and distinct groupings of the buildings based on their certification, type, and location.
+
+<p align="center">
+  <img alt="Davies Bouldin Score" src="links/davies_bouldin.png" height="400px" />
+</p>
+<p align="center">
+  Figure 4: Davies-Bouldin Index measuring cluster separation.
+</p> 
 
 #### DBSCAN (Density-Based Spatial Clustering of Applications with Noise):
 
