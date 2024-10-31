@@ -3,6 +3,38 @@
 # Scraping HubbleHQ: A Data-Driven Exploration of London’s Office Rental Market
 
 ## Introduction
+In the heart of London's vibrant Westminster, I embarked on an office development project that required a deep understanding of the local rental market. By collecting and analyzing real-time data on office spaces, I aimed to make informed decisions on rent prices, hot desk options, and meeting room availability. Web scraping emerged as the ideal solution for gathering fresh insights into market trends, prices, and spatial dynamics, particularly from platforms like HubbleHQ.
+
+## Why Web Scraping?
+Web scraping is a powerful method to obtain up-to-date information directly from websites. For this project, scraping HubbleHQ provided immediate data on office rentals in Westminster, filling gaps left by traditional datasets, which may be outdated or lack specific insights on flexible workspaces, rent per desk, and spatial characteristics.
+
+## Step 1: Understanding the Dataset
+Before diving into code, defining essential data fields was key. Here are the columns that provided the most valuable insights:
+
+OfficeName: The name of the office space provider (e.g., WeWork).
+PostCodeArea: The postal code area indicating the location of each space.
+Rent/Month: Monthly rent for private offices, hot desks, etc.
+DeskNumber: The number of desks available in each listing.
+AreaSize: Total office space size (square feet or square meters).
+Price/Person: Cost per person, derived from the rent and desk number.
+These fields are critical for evaluating trends, especially in understanding the price per desk and spatial comparisons.
+
+## Step 2: Tools and Libraries Used
+For this project, I used Python, along with a few key libraries:
+
+BeautifulSoup and Requests: To send HTTP requests and parse HTML data from HubbleHQ's listings.
+Pandas: For efficient data manipulation and analysis.
+Matplotlib/Seaborn: To visualize trends in office rental prices and space sizes across London.
+These libraries provide a robust, efficient toolkit for web scraping and data analysis, with BeautifulSoup handling HTML parsing and Pandas allowing for large dataset management.
+
+## Step 3: The Web Scraping Process
+To get started, I focused on HubbleHQ as a data source for current office rentals in London. Before scraping, I ensured compliance with their terms of service and respected their robots.txt file to avoid scraping restricted areas.
+
+
+
+
+
+## Introduction
 In today’s rapidly evolving real estate landscape, access to accurate and up-to-date information is crucial for businesses seeking office space. HubbleHQ, a leading office rental platform in London, provides a wealth of data on available office spaces, rental prices, and location specifics. This project focused on scraping and analyzing data from HubbleHQ to gain deeper insights into London’s office rental market and uncover key trends across different areas of the city.
 
 ![HubbleHQ Office Rental](links/website.jpg)
