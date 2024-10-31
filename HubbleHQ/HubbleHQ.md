@@ -11,20 +11,20 @@ Web scraping is a powerful method to obtain up-to-date information directly from
 ### Understanding the Dataset
 Before diving into code, defining essential data fields was key. Here are the columns that provided the most valuable insights:
 
-OfficeName: The name of the office space provider (e.g., WeWork).
-PostCodeArea: The postal code area indicating the location of each space.
-Rent/Month: Monthly rent for private offices, hot desks, etc.
-DeskNumber: The number of desks available in each listing.
-AreaSize: Total office space size (square feet or square meters).
-Price/Person: Cost per person, derived from the rent and desk number.
+- OfficeName: The name of the office space provider (e.g., WeWork).
+- PostCodeArea: The postal code area indicating the location of each space.
+- Rent/Month: Monthly rent for private offices, hot desks, etc.
+- DeskNumber: The number of desks available in each listing.
+- AreaSize: Total office space size (square feet or square meters).
+- Price/Person: Cost per person, derived from the rent and desk number.
 These fields are critical for evaluating trends, especially in understanding the price per desk and spatial comparisons.
 
 ### Tools and Libraries Used
 For this project, I used Python, along with a few key libraries:
 
-BeautifulSoup and Requests: To send HTTP requests and parse HTML data from HubbleHQ's listings.
-Pandas: For efficient data manipulation and analysis.
-Matplotlib/Seaborn: To visualize trends in office rental prices and space sizes across London.
+- BeautifulSoup and Requests: To send HTTP requests and parse HTML data from HubbleHQ's listings.
+- Pandas: For efficient data manipulation and analysis.
+- Matplotlib/Seaborn: To visualize trends in office rental prices and space sizes across London.
 These libraries provide a robust, efficient toolkit for web scraping and data analysis, with BeautifulSoup handling HTML parsing and Pandas allowing for large dataset management.
 
 ## Step 3: The Web Scraping Process
