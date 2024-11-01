@@ -55,7 +55,7 @@ To ensure consistency across the dataset, I normalized monetary values and stand
 - Handling Missing Values: Listings with incomplete data were either discarded or imputed based on similar listings.
 - Numerical Conversion: Price strings like "£900/month" were converted to numeric for calculation purposes.
 - Normalization: Rent values were standardized per square foot/meter, enabling comparisons across locations. (Figure 2)
-- 
+  
 ![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
 *Figure 2: Distribution of office spaces in London based on annual rent per square meter and average desk sizes.*
 
@@ -144,9 +144,25 @@ With the cleaned dataset, I conducted analyses to reveal trends in office pricin
 - Geographic mapping tools such as `geopandas` and `Folium` were used to plot office listings on an interactive map of London, making it easier to identify price hotspots and regions with high office space availability.
 - Further analysis was conducted to compare rental prices in established business districts like Canary Wharf and The City with newer areas such as Shoreditch and Whitechapel.
 
+#### Analysis of Office Rental Value in Camden 
+This figure presents a spatial and quantitative analysis of office rental values in the Camden area. The chart is divided into two scatter plots on the left, showing rental prices by unit and office, respectively, and a map on the right that indicates the spatial distribution of office listings in Camden. The size and colour of the dots represent the number of desks or people the office space can accommodate, with larger and darker dots indicating higher capacities.
+
+**Insights:**
+- Price Distribution: Offices closer to the center of Camden, such as those near Bloomsbury, tend to have higher rental values per desk. This suggests a premium for central locations.
+- Capacity vs. Cost: Spaces that accommodate more desks or people often command higher rental prices, indicating that larger spaces are in demand in central business areas.
+- Suburban vs. Central: Office spaces in more peripheral parts of Camden generally show lower rental rates, which could be more attractive for startups or small businesses seeking affordable options while staying close to Central London.
+
 ![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
 *Figure 3: Analysis of office rental value in Camden, showing spatial density and rental prices by unit and office*
 
+![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
+*Figure 4: Correlation between average rent per square meter and price per person in various London office spaces.*
+
+![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
+*Figure 5: Analysis of office rentals in Westminster with insights into pricing and average desk size by location*
+
+![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
+*Figure 6: Detailed office rental value analysis in Wandsworth, illustrating the distribution of prices and desk sizes across various offices*
 
 ### Technical Challenges
 - Dynamic Content and CAPTCHA: Scraping required adjustments for JavaScript-rendered content and CAPTCHA restrictions are handled via Selenium when necessary.
