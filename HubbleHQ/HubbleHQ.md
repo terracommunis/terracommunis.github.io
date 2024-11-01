@@ -12,7 +12,7 @@ As part of an office development project in Westminster, accurate data on local 
 
 
 ![HubbleHQ Office Rental](links/website.jpg)
-*Figure 1: Global map showing BREEAM-certified project locations, colour-coded by use class (e.g., Residential, Commercial).*
+*Figure 1: HubbleHQ interface showing London office rental listings with location markers and filters for office type, team size, and price.*
 
 ## Project Objective
 The primary goal of this project was to utilize web scraping techniques to collect real-time data on office listings from HubbleHQ. By gathering detailed information on office spaces, prices, locations, and amenities, I aimed to:
