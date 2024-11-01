@@ -4,10 +4,13 @@ To support decision-making in an office development project, web scraping was us
 
 By leveraging web scraping for real-time data acquisition, this project created a detailed dataset on London office rentals, supporting competitive analysis and pricing strategies. The automated approach enabled the capture of dynamic, accurate market data, demonstrating the value of up-to-date information in commercial real estate decision-making.
 
+## Project Scope and Methodology
 ### Objectives
 - Gather real-time data on office rental spaces in Westminster and other London areas.
-- Extract fields such as monthly rent, number of desks, and area size to assess trends.
-- Utilize Python’s web scraping libraries to achieve an efficient, repeatable process.
+- Extract essential fields such as monthly rent, number of desks, and area size to analyze trends.
+- Employ Python’s web scraping libraries to create an efficient, repeatable data collection process.
+- Analyze rental price trends and availability in both established business districts and emerging areas.
+- Utilize mapping techniques to visualize office listings geographically, enabling intuitive comparisons of office space density and pricing.
 
 ![HubbleHQ Office Rental](links/website.jpg)
 *Figure 1: HubbleHQ interface showing London office rental listings with location markers and filters for office type, team size, and price.*
@@ -16,13 +19,6 @@ By leveraging web scraping for real-time data acquisition, this project created 
 - Requests and BeautifulSoup: For HTTP requests and HTML parsing.
 - Pandas: For data cleaning and transformation.
 - Matplotlib/Seaborn: For visualisation of rental trends by area.
-
-### Project Objective
-The primary goal of this project was to utilize web scraping techniques to collect real-time data on office listings from HubbleHQ. By gathering detailed information on office spaces, prices, locations, and amenities, I aimed to:
-
-- Conduct a comprehensive comparison of office rentals across different areas of London.
-- Analyze the rental price trends and availability in popular business districts versus emerging areas.
-- Use mapping techniques to visualize office listings geographically, allowing for intuitive comparisons of office space density and pricing.
 
 ## Step-by-Step Data Collection Methodology
 
