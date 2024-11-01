@@ -181,7 +181,7 @@ This figure provides a detailed view of office rental values in Wandsworth, usin
 - **Spatial Clustering:** Offices with larger capacities and higher rental values are concentrated around key commercial areas in Wandsworth, indicating potential hotspots for business activity.
 - **Variation by Unit and Office:** Smaller units are distributed more widely across Wandsworth, providing a range of price points and sizes. This could cater to different business types, from small startups to established firms seeking satellite offices in more affordable areas.
 
-![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
+![HubbleHQ Office Rental](links/officeRentalValue_withMap.jpg)
 *Figure 6: Detailed office rental value analysis in Wandsworth, illustrating the distribution of prices and desk sizes across various offices*
 
 ### Technical Challenges
