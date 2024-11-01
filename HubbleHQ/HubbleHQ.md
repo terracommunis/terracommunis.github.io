@@ -1,4 +1,4 @@
-# Scraping HubbleHQ: A Data-Driven Exploration of London’s Office Rental Market
+# HubbleHQ: A Data-Driven Exploration of London’s Office Rental Market
 
 ## Introduction
 As part of an office development project in Westminster, accurate data on local office rentals was essential. Traditional datasets were either incomplete or outdated, so I employed web scraping to collect up-to-date information from platforms like HubbleHQ. The project aimed to compile key metrics such as rent prices, desk availability, and spatial configurations, allowing for data-driven decision-making.
