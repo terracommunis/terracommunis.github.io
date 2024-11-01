@@ -84,7 +84,7 @@ driver.get("https://hubblehq.com/")
 # Loop to scroll to the bottom of the page multiple times to load all dynamic content
 last_height = driver.execute_script("return document.body.scrollHeight")
 while True:
-    # Scroll down to bottom of the page
+    # Scroll down to the bottom of the page
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     time.sleep(2)  # Wait to allow listings to load
 
@@ -94,7 +94,7 @@ while True:
         break
     last_height = new_height
 
-# Challenge 2: Extracting data with handling missing values
+# Challenge 2: Extracting data while handling missing values
 listings = driver.find_elements(By.CLASS_NAME, "office-listing")
 data = []
 for listing in listings:
@@ -144,15 +144,15 @@ With the cleaned dataset, I conducted analyses to reveal trends in office pricin
 This figure presents a spatial and quantitative analysis of office rental values in the Camden area. The chart is divided into two scatter plots on the left, showing rental prices by unit and office, respectively, and a map on the right that indicates the spatial distribution of office listings in Camden. The size and colour of the dots represent the number of desks or people the office space can accommodate, with larger and darker dots indicating higher capacities.
 
 **Insights:**
-- Price Distribution: Offices closer to the center of Camden, such as those near Bloomsbury, tend to have higher rental values per desk. This suggests a premium for central locations.
-- Capacity vs. Cost: Spaces that accommodate more desks or people often command higher rental prices, indicating that larger spaces are in demand in central business areas.
-- Suburban vs. Central: Office spaces in more peripheral parts of Camden generally show lower rental rates, which could be more attractive for startups or small businesses seeking affordable options while staying close to Central London.
+- **Price Distribution:** Offices closer to the centre of Camden, such as those near Bloomsbury, tend to have higher rental values per desk, suggesting a premium for central locations.
+- **Capacity vs. Cost:** Spaces that accommodate more desks or people often command higher rental prices, indicating that larger spaces are in demand in central business areas.
+- **Suburban vs. Central:** Office spaces in more peripheral parts of Camden generally show lower rental rates, which could be more attractive for startups or small businesses seeking affordable options while staying close to Central London.
 
 ![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
 *Figure 3: Analysis of office rental value in Camden, showing spatial density and rental prices by unit and office*
 
 #### 3.2 Correlation between Average Rent per Square Meter and Price per Person in London
-This scatter plot illustrates the correlation between average annual rent per square meter and the average monthly price per person across various office spaces in London. Each dot represents a different office, with dot sizes corresponding to the average size per desk. The color gradient indicates rent levels, with warmer tones (e.g., orange) representing higher rent values.
+This scatter plot illustrates the correlation between the average annual rent per square meter and the average monthly price per person across various office spaces in London. Each dot represents a different office, with dot sizes corresponding to the average size per desk. The color gradient indicates rent levels, with warmer tones (e.g., orange) representing higher rent values.
 
 **Insights:**
 - Positive Correlation: There is a clear positive correlation between rent per square meter and price per person, with a trend line showing that higher rents per square meter usually correspond to higher per-person prices. This correlation emphasizes that premium spaces charge more for individual desk spaces.
