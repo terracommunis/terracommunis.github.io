@@ -1,6 +1,10 @@
 # HubbleHQ: A Data-Driven Exploration of London’s Office Rental Market
 
-As part of an office development project in Westminster, accurate data on local office rentals was essential. Traditional datasets were either incomplete or outdated, so I employed web scraping to collect up-to-date information from platforms like HubbleHQ. The project aimed to compile key metrics such as rent prices, desk availability, and spatial configurations, allowing for data-driven decision-making.
+To support decision-making in an office development project, web scraping was used to collect up-to-date data on London office rentals from HubbleHQ, filling gaps left by traditional datasets. Python's Selenium library automated interactions to handle dynamic content loading, enabling comprehensive data collection. Key metrics included rental prices, desk availability, and spatial configurations. Challenges like dynamic page loading, missing data, and incomplete geolocation were addressed through automated scrolling, data cleaning, and location approximation methods.
+
+## Executive Summary
+
+By leveraging web scraping for real-time data acquisition, this project created a detailed dataset on London office rentals, supporting competitive analysis and pricing strategies. The automated approach enabled the capture of dynamic, accurate market data, demonstrating the value of up-to-date information in commercial real estate decision-making.
 
 ### Objectives
 - Gather real-time data on office rental spaces in Westminster and other London areas.
