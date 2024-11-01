@@ -184,7 +184,7 @@ This figure provides a detailed view of office rental values in Wandsworth, usin
 ![HubbleHQ Office Rental](links/officeRentalValue_withMap.jpg)
 *Figure 6: Detailed office rental value analysis in Wandsworth, illustrating the distribution of prices and desk sizes across various offices*
 
-### Technical Challenges
+## Technical Challenges
 - Dynamic Content and CAPTCHA: Scraping required adjustments for JavaScript-rendered content and CAPTCHA restrictions are handled via Selenium when necessary.
 - Adaptability: Regular checks and maintenance of the scraping scripts were necessary to accommodate website structure changes.
 
