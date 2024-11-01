@@ -1,19 +1,20 @@
 # HubbleHQ: A Data-Driven Exploration of London’s Office Rental Market
 
-To support decision-making in an office development project, web scraping was used to collect up-to-date data on London office rentals from HubbleHQ, filling gaps left by traditional datasets. Python's Selenium library automated interactions to handle dynamic content loading, enabling comprehensive data collection. Key metrics included rental prices, desk availability, and spatial configurations. Challenges like dynamic page loading, missing data, and incomplete geolocation were addressed through automated scrolling, data cleaning, and location approximation methods.
+To support decision-making in an office development project, web scraping was used to collect up-to-date data on London office rentals from [HubbleHQ](https://hubblehq.com/), filling gaps left by traditional datasets. Python's Selenium library automated interactions to handle dynamic content loading, enabling comprehensive data collection. Key metrics included rental prices, desk availability, and spatial configurations. Challenges like dynamic page loading, missing data, and incomplete geolocation were addressed through automated scrolling, data cleaning, and location approximation methods.
 
 By leveraging web scraping for real-time data acquisition, this project created a detailed dataset on London office rentals, supporting competitive analysis and pricing strategies. The automated approach enabled the capture of dynamic, accurate market data, demonstrating the value of up-to-date information in commercial real estate decision-making.
 
+![HubbleHQ Office Rental](links/website.jpg)
+*Figure 1: HubbleHQ interface showing London office rental listings with location markers and filters for office type, team size, and price.*
+
 ## Project Scope and Methodology
+
 ### Objectives
 - Gather real-time data on office rental spaces in Westminster and other London areas.
 - Extract essential fields such as monthly rent, number of desks, and area size to analyze trends.
 - Employ Python’s web scraping libraries to create an efficient, repeatable data collection process.
 - Analyze rental price trends and availability in both established business districts and emerging areas.
 - Utilize mapping techniques to visualize office listings geographically, enabling intuitive comparisons of office space density and pricing.
-
-![HubbleHQ Office Rental](links/website.jpg)
-*Figure 1: HubbleHQ interface showing London office rental listings with location markers and filters for office type, team size, and price.*
 
 ### Tools and Libraries
 - Requests and BeautifulSoup: For HTTP requests and HTML parsing.
