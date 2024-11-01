@@ -56,7 +56,7 @@ To ensure consistency across the dataset, I normalized monetary values and stand
 - Numerical Conversion: Price strings like "£900/month" were converted to numeric for calculation purposes.
 - Normalization: Rent values were standardized per square foot/meter, enabling comparisons across locations. (Figure 2)
   
-![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
+![HubbleHQ Office Rental](links/Office_Spaces_in_London.jpg)
 *Figure 2: Distribution of office spaces in London based on annual rent per square meter and average desk sizes.*
 
 ### Challenges Encountered
