@@ -139,12 +139,8 @@ driver.quit()
 
 ### 3. Data Analysis and Visualisation
 With the cleaned dataset, I conducted analyses to reveal trends in office pricing:
-- Average Rent per Desk: Calculated for a comparative overview across different London areas.
-- Spatial Analysis: Trends in office sizes by location were visualized using bar charts and heatmaps, highlighting spatial pricing differentials.
-- Geographic mapping tools such as `geopandas` and `Folium` were used to plot office listings on an interactive map of London, making it easier to identify price hotspots and regions with high office space availability.
-- Further analysis was conducted to compare rental prices in established business districts like Canary Wharf and The City with newer areas such as Shoreditch and Whitechapel.
 
-#### Analysis of Office Rental Value in Camden 
+#### 3.1 Analysis of Office Rental Value in Camden 
 This figure presents a spatial and quantitative analysis of office rental values in the Camden area. The chart is divided into two scatter plots on the left, showing rental prices by unit and office, respectively, and a map on the right that indicates the spatial distribution of office listings in Camden. The size and colour of the dots represent the number of desks or people the office space can accommodate, with larger and darker dots indicating higher capacities.
 
 **Insights:**
