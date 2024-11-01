@@ -162,7 +162,15 @@ This scatter plot illustrates the correlation between average annual rent per sq
 ![HubbleHQ Office Rental](links/Office_Spaces_Correlation.jpg)
 *Figure 4: Correlation between average rent per square meter and price per person in various London office spaces.*
 
-![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
+#### 3.3 Office Rental Analysis in Westminster
+This figure shows office rental data for Westminster, focusing on average rental prices per square meter, average monthly price per person, and desk size per office. Each point on the scatter plot represents an office location, with dot size reflecting the average size per desk and color coding by specific areas within Westminster.
+
+**Insights:**
+- High-Priced Areas: Locations in the core of Westminster, such as those near Cavendish Square, exhibit high rental prices both per square meter and per person. This area appears to attract premium rentals, likely due to its proximity to notable business districts and amenities.
+- Desk Size and Pricing: Larger desk sizes in some locations correlate with higher pricing, suggesting that Westminster’s premium office spaces may cater to businesses that need more space per employee.
+- Competitive Pricing: Some offices offer lower-than-average prices in Westminster, potentially as competitive options for businesses wanting a central location without paying premium rates.
+
+![HubbleHQ Office Rental](links/Office_Spaces_Westminster.jpg)
 *Figure 5: Analysis of office rentals in Westminster with insights into pricing and average desk size by location*
 
 ![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
