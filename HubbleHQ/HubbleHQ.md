@@ -151,7 +151,15 @@ This figure presents a spatial and quantitative analysis of office rental values
 ![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
 *Figure 3: Analysis of office rental value in Camden, showing spatial density and rental prices by unit and office*
 
-![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
+#### 3.2 Correlation between Average Rent per Square Meter and Price per Person in London
+This scatter plot illustrates the correlation between average annual rent per square meter and the average monthly price per person across various office spaces in London. Each dot represents a different office, with dot sizes corresponding to the average size per desk. The color gradient indicates rent levels, with warmer tones (e.g., orange) representing higher rent values.
+
+**Insights:**
+- Positive Correlation: There is a clear positive correlation between rent per square meter and price per person, with a trend line showing that higher rents per square meter usually correspond to higher per-person prices. This correlation emphasizes that premium spaces charge more for individual desk spaces.
+- Price Outliers: A few office locations (e.g., in premium areas like Mayfair or Soho) stand out with exceptionally high prices per person, indicating exclusive office spaces with high demand.
+- Desk Size Variations: The larger circles indicate offices with more spacious desk setups, suggesting that offices with larger individual desk areas charge a premium. This may appeal to companies that prioritize spacious work environments.
+
+![HubbleHQ Office Rental](links/Office_Spaces_Correlation.jpg)
 *Figure 4: Correlation between average rent per square meter and price per person in various London office spaces.*
 
 ![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
