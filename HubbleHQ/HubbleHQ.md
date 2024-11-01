@@ -57,7 +57,7 @@ To ensure consistency across the dataset, I normalized monetary values and stand
 - Normalization: Rent values were standardized per square foot/meter, enabling comparisons across locations.
   
 ![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
-*Figure 1: HubbleHQ interface showing London office rental listings with location markers and filters for office type, team size, and price.*
+*Figure 2: Office Rental Value in Camden*
 
 ### Challenges Encountered
 - **Dynamic Content:** HubbleHQ’s listings page uses dynamic loading, meaning that office listings are not fully loaded when the page first loads. I had to utilize `Selenium` to automate scrolling and simulate interactions to scrape all available data.
