@@ -54,8 +54,11 @@ df.to_csv('office_data.csv', index=False)
 To ensure consistency across the dataset, I normalized monetary values and standardized spatial metrics:
 - Handling Missing Values: Listings with incomplete data were either discarded or imputed based on similar listings.
 - Numerical Conversion: Price strings like "£900/month" were converted to numeric for calculation purposes.
-- Normalization: Rent values were standardized per square foot/meter, enabling comparisons across locations.
-  
+- Normalization: Rent values were standardized per square foot/meter, enabling comparisons across locations. (Figure 2)
+- 
+![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
+*Figure 2: Distribution of office spaces in London based on annual rent per square meter and average desk sizes.*
+
 ### Challenges Encountered
 - **Dynamic Content:** HubbleHQ’s listings page uses dynamic loading, meaning that office listings are not fully loaded when the page first loads. I had to utilize `Selenium` to automate scrolling and simulate interactions to scrape all available data.
 - **Data Cleaning:** Some listings contained incomplete information, such as missing prices or inconsistent office size descriptions, requiring careful data handling to ensure accurate analysis.
@@ -142,7 +145,7 @@ With the cleaned dataset, I conducted analyses to reveal trends in office pricin
 - Further analysis was conducted to compare rental prices in established business districts like Canary Wharf and The City with newer areas such as Shoreditch and Whitechapel.
 
 ![HubbleHQ Office Rental](links/camden_office_rental_value.jpg)
-*Figure 2: Analysis of office rental value in Camden, showing spatial density and rental prices by unit and office*
+*Figure 3: Analysis of office rental value in Camden, showing spatial density and rental prices by unit and office*
 
 
 ### Technical Challenges
